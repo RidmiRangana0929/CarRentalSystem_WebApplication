@@ -1,18 +1,62 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-.nav-link {
+
+/*main{
+    width: 99vw;
+}*/
+
+/*.nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: var(--bs-nav-link-font-size);
     font-family: 'Poppins', sans-serif;
     font-weight: var(--bs-nav-link-font-weight);
-    color: #70717A;
+    color: #ffffff;
     text-decoration: none;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-}
+}*/
 #focus{
-    color: #9264E1 !important;
+    color: #EFA80F !important;
 }
 .nav-link:focus, .nav-link:hover{
-    color: #9264E1;
+    color: #EFA80F;
 }
+
+#r1{
+    height: 20vh;
+    width: 60vw;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+
+}
+
+/*#s1{
+    height: 94vh;
+    position: absolute;
+    top: 6vh
+}
+#img1{
+    position: absolute;
+    width: 100vw;
+    height: 94vh;
+    overflow: hidden;
+}
+#carouselExampleSlidesOnly #img_s1 #img_s2 #img_s3 #s1_d1{
+    height: 90vh;
+}
+.carousel-inner{
+    position: relative;
+    width: 100vw;
+    height: 93vh;
+    overflow: hidden;
+}
+#h1{
+    color: #ffffff;
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-size: 1.8em;
+
+}*/
+
+
