@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.nav-link {
+    display: block;
+    padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size: var(--bs-nav-link-font-size);
+    font-family: 'Poppins', sans-serif;
+    font-weight: var(--bs-nav-link-font-weight);
+    color: #70717A;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+#focus{
+    color: #9264E1 !important;
+}
+.nav-link:focus, .nav-link:hover{
+    color: #9264E1;
+}
