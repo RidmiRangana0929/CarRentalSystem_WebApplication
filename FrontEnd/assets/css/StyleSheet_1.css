@@ -37,12 +37,14 @@
     width: 98.9vw;
     position: absolute;
     margin: auto;
-    top: 41vh;
+    top: 13vh;
     left: 0;
     right: 0;
     font-family: 'Poppins', sans-serif;
     font-size: 6em;
     color: white;
+
+
 }
 #subTopic1{
     height: 20vh;
@@ -81,6 +83,68 @@
     color: white;
 
 }
+
+#topic2\.1{
+    border-bottom: 2px solid;
+    text-align: left;
+    width: 36vw;
+    position: absolute;
+    margin: auto;
+    top: 9vh;
+    left: 0;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+#topic2\.2{
+    text-align: left;
+    width: 36vw;
+    position: absolute;
+    margin: auto;
+    top: 9vh;
+    left: 6.5vw;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: #EFA80F;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+
+#topic3\.1{
+    border-bottom: 2px solid;
+    text-align: left;
+    width: 36vw;
+    position: absolute;
+    margin: auto;
+    top: 195vh;
+    left: 183px;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+#topic3\.2{
+    text-align: left;
+    width: 36vw;
+    position: absolute;
+    margin: auto;
+    top: 195vh;
+    left: 18.5vw;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: #EFA80F;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
 
 /*#s1{
     height: 94vh;
