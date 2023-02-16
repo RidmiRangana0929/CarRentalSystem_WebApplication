@@ -31,6 +31,32 @@
     color: #EFA80F !important;
 }
 
+#topic1{
+    text-align: center;
+    height: 22vh;
+    width: 98.9vw;
+    position: absolute;
+    margin: auto;
+    top: 41vh;
+    left: 0;
+    right: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 6em;
+    color: white;
+}
+#subTopic1{
+    height: 20vh;
+    width: 98.9vw;
+    position: absolute;
+    margin: auto;
+    top: 30vh;
+    left: 0;
+    right: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    color: white;
+}
+
 #r1{
     background-color: #efa80f38;
     height: 20vh;
