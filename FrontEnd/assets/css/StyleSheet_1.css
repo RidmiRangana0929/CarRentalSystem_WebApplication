@@ -18,11 +18,21 @@
 #focus{
     color: #EFA80F !important;
 }
-.nav-link:focus, .nav-link:hover{
-    color: #EFA80F;
+#li1:hover {
+    color: #EFA80F !important;
+}
+#li2:hover {
+    color: #EFA80F !important;
+}
+#li3:hover {
+    color: #EFA80F !important;
+}
+#li4:hover {
+    color: #EFA80F !important;
 }
 
 #r1{
+    background-color: #e6dbb9;
     height: 20vh;
     width: 60vw;
     position: absolute;
