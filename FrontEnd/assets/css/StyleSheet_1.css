@@ -32,13 +32,27 @@
 }
 
 #r1{
-    background-color: #e6dbb9;
+    background-color: #efa80f38;
     height: 20vh;
-    width: 60vw;
+    width: 98.9vw;
     position: absolute;
     margin: auto;
+    top: 74vh;
     left: 0;
     right: 0;
+
+}
+#r1c1 #r1c2 {
+    border-right: 2px solid black;
+}
+.mainTopic1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    color: white;
+}
+.mainTopic2{
+    font-family: 'Poppins', sans-serif;
+    color: white;
 
 }
 
