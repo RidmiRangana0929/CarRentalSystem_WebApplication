@@ -180,6 +180,33 @@
     padding-bottom: 10px;
     padding-left: 20px;
 }
+#topic5\.1{
+    text-align: center;
+    width: 75vw;
+    position: absolute;
+    margin: auto;
+    top: 448vh;
+    left: 183px;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+    color: black;
+    padding-bottom: 10px;
+}
+#topic5\.2{
+    text-align: center;
+    width: 36vw;
+    position: relative;
+    margin: auto;
+    top: 103px;
+    left: 0;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #6c757d;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
 
 
 /*#s1{
