@@ -151,6 +151,36 @@
     padding-bottom: 10px;
 }
 
+#topic4\.1{
+    border-bottom: 2px solid;
+    text-align: left;
+    width: 36vw;
+    position: absolute;
+    margin: auto;
+    top: 360vh;
+    left: 183px;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: black;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+#topic4\.2{
+    text-align: left;
+    width: 36vw;
+    position: absolute;
+    margin: auto;
+    top: 360vh;
+    left: 18.5vw;
+    right: 51vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: #EFA80F;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
 
 /*#s1{
     height: 94vh;
