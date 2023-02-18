@@ -301,6 +301,10 @@
     font-family: 'Poppins', sans-serif;
     color: #828c95;
 }
+
+#username :focus{
+    box-shadow: -2px -2px 12px 5px #efbe65, 2px 2px 12px 5px #efbe65 !important;
+}
 #signIn{
     width: 16vw;
     height: 6vh;
@@ -313,5 +317,8 @@
     border-radius: 25px;
     border-color: transparent;
     color: #fefefe;
+}
+.form-group :focus{
+    box-shadow: -2px -2px 3px 2px  #efbe65, 2px 2px 3px 2px  #efbe65 !important;
 }
 

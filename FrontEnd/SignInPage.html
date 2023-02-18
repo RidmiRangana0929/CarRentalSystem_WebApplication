@@ -21,7 +21,7 @@
           <li><a href="index.html" class="nav-link px-2 text-white" id="li1">Home</a></li>
           <li><a href="#" class="nav-link px-2 text-white" id="li2">Admin</a></li>
           <li><a href="#" class="nav-link px-2 text-white" id="li3">Drivers</a></li>
-          <li><a href="SignInPage.html" class="nav-link px-2 text-white" id="li4">Sign In</a></li>
+          <li><a href="SignInPage.html" class="nav-link px-2 text-white" id="li4" style="color: #EFA80F !important;">Sign In</a></li>
           <li><a href="#" class="nav-link px-2 text-white" id="li5">Sign Up</a></li>
       </ul>
     </div>
@@ -39,8 +39,13 @@
 <section id="signInForm">
 
     <div style="background-color: rgba(255,255,255,0)">
-        <h6 class="tag1">Username</h6>
-        <div class="textBox"></div>
+        <div class="form-group">
+            <label for="username" id="user" class="tag1">Username</label>
+            <input class="form-control" id="username"  required type="text" style="width: 30vw;height: 5.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+            <span class="control-error" id="lblUsername"></span>
+        </div>
+        <!--<h6 class="tag1">Username</h6>
+        <div class="textBox"></div>-->
     </div>
 
     <div style="background-color: rgba(255,255,255,0)">
@@ -58,8 +63,13 @@
     </div>
 
     <div style="background-color: rgba(255,255,255,0)">
-        <h6 class="tag1">password</h6>
-        <div class="textBox"></div>
+        <div class="form-group">
+            <label for="password" id="pass" class="tag1">Username</label>
+            <input class="form-control" id="password"  required type="password" style="width: 30vw;height: 5.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+            <span class="control-error" id="lblPassword"></span>
+        </div>
+        <!--<h6 class="tag1">password</h6>
+        <div class="textBox"></div>-->
     </div>
 
     <div style="background-color: rgba(255,255,255,0)"></div>
