@@ -317,7 +317,7 @@
     right: 0;
     background-color: #EFA80F;
     font-family: 'Poppins', sans-serif;
-    border-radius: 25px;
+    border-radius: 10px;
     border-color: transparent;
     color: #fefefe;
 }
@@ -330,7 +330,7 @@
 
 #signUp1{
     width: 64vw;
-    height: 12vh;
+    height: 10vh;
     display: grid;
     grid-template-rows: repeat(1,1fr);
     grid-template-columns: repeat(2,1fr);
@@ -344,7 +344,7 @@
 }
 #signUp2{
     width: 64vw;
-    height: 12vh;
+    height: 10vh;
     display: grid;
     grid-template-rows: repeat(1,1fr);
     grid-template-columns: repeat(2,1fr);
@@ -358,7 +358,7 @@
 }
 #signUp3{
     width: 64vw;
-    height: 12vh;
+    height: 10vh;
     display: grid;
     grid-template-rows: repeat(1,1fr);
     grid-template-columns: repeat(2,1fr);
@@ -372,7 +372,7 @@
 }
 #signUp4{
     width: 64vw;
-    height: 12vh;
+    height: 10vh;
     position: relative;
     margin: auto;
     left: 0;
@@ -382,7 +382,7 @@
 }
 #signUp5{
     width: 64vw;
-    height: 12vh;
+    height: 10vh;
     display: grid;
     grid-template-rows: repeat(1,1fr);
     grid-template-columns: repeat(2,1fr);
@@ -396,7 +396,7 @@
 }
 #signUp6{
     width: 64vw;
-    height: 12vh;
+    height: 10vh;
     position: relative;
     margin: auto;
     left: 0;
@@ -406,7 +406,7 @@
 }
 #signUp7{
     width: 64vw;
-    height: 12vh;
+    height: 10vh;
     position: relative;
     margin: auto;
     left: 0;
@@ -416,14 +416,42 @@
 }
 #signUp{
     width: 16vw;
-    height: 6vh;
+    height: 5vh;
     position: relative;
-    top: 2vh;
+    top: 4vh;
     left: 24vw;
     right: 0;
     background-color: #EFA80F;
     font-family: 'Poppins', sans-serif;
-    border-radius: 25px;
+    border-radius: 10px;
+    border-color: transparent;
+    color: #fefefe;
+}
+#driverForm{
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 2px;
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 7vh;
+    background-color: rgba(255, 255, 255, 0);
+}
+#btnSave , #btnUpdate, #btnDelete{
+    width: 8vw;
+    height: 4vh;
+    position: relative;
+    top: 4vh;
+    left: 1.3vw;
+    right: 0;
+    margin: auto;
+    background-color: #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
     border-color: transparent;
     color: #fefefe;
 }
