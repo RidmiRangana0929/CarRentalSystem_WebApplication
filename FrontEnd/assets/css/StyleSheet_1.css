@@ -477,3 +477,32 @@
     color: #fefefe;
 }
 
+#btnEditProfile{
+    width: 20vw;
+    height: 4vh;
+    position: absolute;
+    bottom: 9vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border-color: transparent;
+    color: #fefefe;
+}
+#btnCustomerSignOut{
+    width: 20vw;
+    height: 4vh;
+    position: absolute;
+    bottom: 4vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border-color: transparent;
+    color: #fefefe;
+}
+
