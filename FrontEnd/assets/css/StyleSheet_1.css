@@ -535,5 +535,20 @@
     border-bottom: 0.5vh solid #EFA80F;
 }
 
+.carCol{
+    width: 7% !important;
+    text-align: center !important;
+}
+.carForm{
+    width: 97%;
+    height: 93%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
 
 
