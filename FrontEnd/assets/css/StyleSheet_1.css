@@ -541,15 +541,14 @@
 }
 .carForm{
     width: 97%;
-    height: 93%;
+    height: 80%;
     position: absolute;
     left: 0;
     top: 0;
-    bottom: 0;
     right: 0;
     margin: auto;
     display: grid;
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: repeat(5,1fr);
     grid-template-columns: repeat(4,1fr);
     gap: 2px;
 }
@@ -557,7 +556,7 @@
 .carTag{
     position: relative;
     font-family: 'Poppins', sans-serif;
-    color: #828c95;
+    color: #6c717b;
     font-size: 1em;
     top: 2vh;
     left: 1.5vw
@@ -574,8 +573,19 @@
     margin: auto;
     border-radius: 25px;
 }
+
 .form-select:focus{
-    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    border-color: #EFA80F !important;
+    box-shadow: 0 0 0 0.25rem #efa80f52 !important;
+}
+.form-control{
+    color: #828c95;
+}
+
+.form-control:focus{
+    color: #828c95;
     background-color: #fff;
     outline: 0;
     border-color: #EFA80F !important;
@@ -583,7 +593,7 @@
 }
 
 #registerNo,#brand,#type,#passengers,#transmissionType,#fuelType,#color,#dailyRate,#kmForDay,#monthlyRate,#kmForMonth,#priceForExtraKm,#lossDamageWaiver,#frontView,#backView,#sideView,#interior{
-    width: 21vw;
+    width: 20vw;
     height: 4.5vh;
     position: relative;
     background-color: white;
@@ -593,6 +603,46 @@
     right: 0;
     margin: auto;
     border-radius: 25px;
+}
+#btnCarUpdate{
+    width: 10vw;
+    height: 4vh;
+    position: absolute;
+    top: 2vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border-color: transparent;
+    color: #fefefe;
+}
+#btnCarSave{
+    width: 10vw;
+    height: 4vh;
+    position: absolute;
+    top: 2vh;
+    right: 46vw;
+    margin: auto;
+    background-color: #16a085;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border-color: transparent;
+    color: #fefefe;
+}
+#btnCarDelete{
+    width: 10vw;
+    height: 4vh;
+    position: absolute;
+    top: 2vh;
+    left: 46vw;
+    margin: auto;
+    background-color: #eb3b5a;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border-color: transparent;
+    color: #fefefe;
 }
 
 

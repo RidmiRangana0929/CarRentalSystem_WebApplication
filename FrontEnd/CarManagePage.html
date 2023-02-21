@@ -29,7 +29,7 @@
 </header>
 
 <section style="background-color: #ffffff;width: 98.9vw; height: 93vh; position: absolute; top: 7vh;">
-    <div style="width: 95%;height: 90%;position: absolute;left:0;top: 0; bottom: 0; right: 0; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
+    <div style="width: 90%;height: 70%;position: absolute;left:0;top: 0; bottom: 0; right: 0; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
         <section class="carForm">
             <div>
                 <div class="form-group">
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div>
-                <lable id="c_transmission_type"  class="carTag">Transmission Type</lable>
+                <label id="c_transmission_type"  class="carTag">Transmission Type</label>
                 <select class="form-select" aria-label="Default select example" id="transmissionType">
 
                     <option selected>Manual</option>
@@ -125,46 +125,58 @@
             </div>
             <div>
                 <label id="c_frontView"  class="carTag">Image Of Front view</label>
-                <select class="form-select" aria-label="Default select example" id="frontView">
-                    <option selected>Manual</option>
-                    <option value="1">Auto</option>
-                </select>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="frontView">
+                </div>
             </div>
             <div>
                 <label id="c_backView"  class="carTag">Image Of Back view</label>
-                <select class="form-select" aria-label="Default select example" id="backView">
-                    <option selected>Manual</option>
-                    <option value="1">Auto</option>
-                </select>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="backView">
+                </div>
             </div>
             <div>
                 <label id="c_sideView"  class="carTag">Image Of Side view</label>
-                <select class="form-select" aria-label="Default select example" id="sideView">
-                    <option selected>Manual</option>
-                    <option value="1">Auto</option>
-                </select>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="sideView">
+                </div>
             </div>
             <div>
                 <label id="c_interior"  class="carTag">Image Of Interior</label>
-                <select class="form-select" aria-label="Default select example" id="interior">
-                    <option selected>Manual</option>
-                    <option value="1">Auto</option>
-                </select>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="interior">
+                </div>
+
             </div>
             <div></div>
             <div></div>
             <div></div>
+
+
+
+
+            <!--<div></div>
             <div></div>
             <div></div>
-            <div></div>
-            <div></div>
+            <div></div>-->
+        </section>
+        <section style="width: 90%;height: 15%;position: absolute;bottom: 0;left: 0;right: 0;margin: auto; background-color: rgba(255,255,255,0)">
+            <div>
+                <button id="btnCarSave">Save</button>
+            </div>
+            <div>
+                <button id="btnCarUpdate">Update</button>
+            </div>
+            <div>
+                <button id="btnCarDelete">Delete</button>
+            </div>
         </section>
     </div>
 </section>
 
 
 <section style="background-color: #ffffff;width: 98.9vw; height: 100vh; position: absolute; top: 100vh;">
-    <section id="cb2" style="height: 100%;padding-top: 4vh;padding-bottom: 4vh;width: 91vw;position: relative;margin: auto;top: 0;left: 0;right: 0;bottom: 0;">
+    <section id="cb2" style="height: 100%;/*padding-top: 4vh;padding-bottom: 4vh;*/width: 91vw;position: relative;margin: auto;top: 0;left: 0;right: 0;bottom: 0;overflow-y: scroll">
         <table class="table table-bordered table-hover" id="table">
             <thead class="bg-danger text-white" id="tableHeader" style="background-color: #efa80f !important;">
             <tr>
