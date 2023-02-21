@@ -505,4 +505,35 @@
     border-color: transparent;
     color: #fefefe;
 }
+.carSlideShow{
+    width: 25vw;
+    height: 35vh;
+    position: absolute;
+    left: 2vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+.carDetails{
+    width: 40vw;
+    height: 35vh;
+    position: absolute;
+    right: 2vw;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #ffffff;
+}
+.carName{
+    color: #63676b;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    width: 100%;
+    top: 1vw;
+    border-bottom: 0.5vh solid #EFA80F;
+}
+
+
 
