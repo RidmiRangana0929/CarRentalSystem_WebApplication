@@ -300,9 +300,10 @@
 .tag1{
     position: relative;
     top: 2vh;
-    left: 6vw;
+    left: 5vw;
     font-family: 'Poppins', sans-serif;
     color: #828c95;
+    font-size: 0.8em;
 }
 
 #username :focus{
@@ -321,10 +322,9 @@
     border-color: transparent;
     color: #fefefe;
 }
-.form-group :focus{
+.form-group:focus{
     color: #212529;
     background-color: #fff;
-    border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 0.25rem #efa80f52 !important;
 
@@ -548,6 +548,51 @@
     bottom: 0;
     right: 0;
     margin: auto;
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(4,1fr);
+    gap: 2px;
+}
+
+.carTag{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    color: #828c95;
+    font-size: 1em;
+    top: 2vh;
+    left: 1.5vw
+}
+#carInput{
+    width: 21vw;
+    height: 4vh;
+    position: relative;
+    background-color: white;
+    border: 1px solid #EFA80F;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 25px;
+}
+.form-select:focus{
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    border-color: #EFA80F !important;
+    box-shadow: 0 0 0 0.25rem #efa80f52 !important;
+}
+
+#registerNo,#brand,#type,#passengers,#transmissionType,#fuelType,#color,#dailyRate,#kmForDay,#monthlyRate,#kmForMonth,#priceForExtraKm,#lossDamageWaiver,#frontView,#backView,#sideView,#interior{
+    width: 21vw;
+    height: 4.5vh;
+    position: relative;
+    background-color: white;
+    border: 1px solid #EFA80F;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 25px;
 }
 
 

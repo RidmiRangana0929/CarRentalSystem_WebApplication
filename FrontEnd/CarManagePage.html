@@ -29,8 +29,136 @@
 </header>
 
 <section style="background-color: #ffffff;width: 98.9vw; height: 93vh; position: absolute; top: 7vh;">
-    <div style="width: 91%;height: 80%;position: absolute;left:0;top: 0; bottom: 0; right: 0; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
-        <section class="carForm"></section>
+    <div style="width: 95%;height: 90%;position: absolute;left:0;top: 0; bottom: 0; right: 0; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
+        <section class="carForm">
+            <div>
+                <div class="form-group">
+                    <label for="registerNo" id="register_no"  class="carTag">Register No</label>
+                    <input class="form-control" id="registerNo"  required type="text">
+                    <span class="control-error" id="lbl_register_no"></span>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="brand" id="c_brand"  class="carTag">Brand</label>
+                    <input class="form-control" id="brand"  required type="text">
+                    <span class="control-error" id="lbl_c_brand"></span>
+                </div>
+            </div>
+            <div>
+                <label id="c_type"  class="carTag">Type</label>
+                <select class="form-select" aria-label="Default select example" id="type">
+                    <option selected>Manual</option>
+                    <option value="1">Auto</option>
+                </select>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="passengers" id="c_passengers"  class="carTag">No Of Passengers</label>
+                    <input class="form-control" id="passengers"  required type="text">
+                    <span class="control-error" id="lbl_c_passengers"></span>
+                </div>
+            </div>
+            <div>
+                <lable id="c_transmission_type"  class="carTag">Transmission Type</lable>
+                <select class="form-select" aria-label="Default select example" id="transmissionType">
+
+                    <option selected>Manual</option>
+                    <option value="1">Auto</option>
+                </select>
+            </div>
+            <div>
+                <label id="c_fuelType" class="carTag">Fuel Type</label>
+                <select class="form-select" aria-label="Default select example" id="fuelType">
+                    <option selected>Manual</option>
+                    <option value="1">Auto</option>
+                </select>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="color" id="c_color"  class="carTag">Color</label>
+                    <input class="form-control" id="color"  required type="text">
+                    <span class="control-error" id="lbl_c_color"></span>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="dailyRate" id="c_dailyRate"  class="carTag">Daily Rate</label>
+                    <input class="form-control" id="dailyRate"  required type="text">
+                    <span class="control-error" id="lbl_c_dailyRate"></span>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="kmForDay" id="c_kmForDay"  class="carTag">Kilometers For Day</label>
+                    <input class="form-control" id="kmForDay"  required type="text">
+                    <span class="control-error" id="lbl_c_kmForDay"></span>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="monthlyRate" id="c_monthlyRate"  class="carTag">Monthly Rate</label>
+                    <input class="form-control" id="monthlyRate"  required type="text">
+                    <span class="control-error" id="lbl_c_monthlyRate"></span>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="kmForMonth" id="c_kmForMonth"  class="carTag">Kilometers For Month</label>
+                    <input class="form-control" id="kmForMonth"  required type="text">
+                    <span class="control-error" id="lbl_c_kmForMonth"></span>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="priceForExtraKm" id="c_priceForExtraKm"  class="carTag">Price For Extra Kilometers</label>
+                    <input class="form-control" id="priceForExtraKm"  required type="text">
+                    <span class="control-error" id="lbl_c_priceForExtraKm"></span>
+                </div>
+            </div>
+            <div>
+                <div class="form-group">
+                    <label for="lossDamageWaiver" id="c_LossDamageWaiver"  class="carTag">Loss damage Waiver</label>
+                    <input class="form-control" id="lossDamageWaiver"  required type="text">
+                    <span class="control-error" id="lbl_c_LossDamageWaiver"></span>
+                </div>
+            </div>
+            <div>
+                <label id="c_frontView"  class="carTag">Image Of Front view</label>
+                <select class="form-select" aria-label="Default select example" id="frontView">
+                    <option selected>Manual</option>
+                    <option value="1">Auto</option>
+                </select>
+            </div>
+            <div>
+                <label id="c_backView"  class="carTag">Image Of Back view</label>
+                <select class="form-select" aria-label="Default select example" id="backView">
+                    <option selected>Manual</option>
+                    <option value="1">Auto</option>
+                </select>
+            </div>
+            <div>
+                <label id="c_sideView"  class="carTag">Image Of Side view</label>
+                <select class="form-select" aria-label="Default select example" id="sideView">
+                    <option selected>Manual</option>
+                    <option value="1">Auto</option>
+                </select>
+            </div>
+            <div>
+                <label id="c_interior"  class="carTag">Image Of Interior</label>
+                <select class="form-select" aria-label="Default select example" id="interior">
+                    <option selected>Manual</option>
+                    <option value="1">Auto</option>
+                </select>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
     </div>
 </section>
 
