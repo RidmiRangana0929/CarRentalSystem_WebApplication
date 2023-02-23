@@ -302,8 +302,8 @@
     top: 2vh;
     left: 5vw;
     font-family: 'Poppins', sans-serif;
-    color: #828c95;
-    font-size: 0.8em;
+    color: #6c757d;
+    font-size: 0.9em;
 }
 
 #username :focus{
@@ -557,7 +557,7 @@
     position: relative;
     font-family: 'Poppins', sans-serif;
     color: #6c717b;
-    font-size: 1em;
+    font-size: 0.9em;
     top: 2vh;
     left: 1.5vw
 }
@@ -580,12 +580,12 @@
     border-color: #EFA80F !important;
     box-shadow: 0 0 0 0.25rem #efa80f52 !important;
 }
-.form-control{
+/*.form-control{
     color: #828c95;
-}
+}*/
 
 .form-control:focus{
-    color: #828c95;
+    /*color: #828c95;*/
     background-color: #fff;
     outline: 0;
     border-color: #EFA80F !important;
@@ -643,6 +643,21 @@
     border-radius: 25px;
     border-color: transparent;
     color: #fefefe;
+}
+.tag2{
+    position: relative;
+    top: 2vh;
+    left: 5vw;
+    font-family: 'Poppins', sans-serif;
+    color: #6c757d;
+    font-size: 0.9em;
+}
+#availableCarSearch{
+    width: 98.9vw;
+    height: 40vh;
+    background-color: #ecf0f1;
+    position: absolute;
+    top: 70vh;
 }
 
 
