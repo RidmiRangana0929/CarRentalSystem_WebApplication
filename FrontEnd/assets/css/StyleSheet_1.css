@@ -517,7 +517,7 @@
 }
 
 .carDetails{
-    width: 64vw;
+    width: 50vw;
     height: 35vh;
     position: absolute;
     right: 2vw;
@@ -687,8 +687,10 @@
 }
 .carInfo{
     position: relative;
-    width: 64vw;
-    height: 30vh;
+    top: 5vh;
+    left: -1vw;
+    width: 50vw;
+    height: 25vh;
     display: grid;
     grid-template-rows: repeat(1,1fr);
     grid-template-columns: repeat(2,1fr);
@@ -712,24 +714,22 @@
 .icon{
     height: 3vh;
     position: relative;
-    top: 0vh;
+    top: 1vh;
     bottom: 0vh;
     left: 0vw;
 }
 .detail1{
-    position: absolute;
-    top: 1vh;
-    bottom: 0vh;
+    position: relative;
+    top: -1.5vh;
     margin: auto;
-    left: 4vw;
+    left: 3vw;
     font-family: 'Poppins', sans-serif;
     color: #6c757d;
     font-size: 0.9em;
 }
 .detail2{
     position: absolute;
-    top: 6vh;
-    bottom: 0vh;
+    top: 7vh;
     margin: auto;
     left: 4vw;
     font-family: 'Poppins', sans-serif;
@@ -738,8 +738,7 @@
 }
 .detail3{
     position: absolute;
-    top: 11vh;
-    bottom: 0vh;
+    top: 13vh;
     margin: auto;
     left: 4vw;
     font-family: 'Poppins', sans-serif;
@@ -748,8 +747,7 @@
 }
 .detail4{
     position: absolute;
-    top: 16vh;
-    bottom: 0vh;
+    top: 19vh;
     margin: auto;
     left: 4vw;
     font-family: 'Poppins', sans-serif;
@@ -758,8 +756,7 @@
 }
 .detail5{
     position: absolute;
-    top: 21vh;
-    bottom: 0vh;
+    top: 25vh;
     margin: auto;
     left: 4vw;
     font-family: 'Poppins', sans-serif;
@@ -769,7 +766,6 @@
 .detail6{
     position: absolute;
     top: 26vh;
-    bottom: 0vh;
     margin: auto;
     left: 4vw;
     font-family: 'Poppins', sans-serif;
