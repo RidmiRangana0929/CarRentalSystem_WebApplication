@@ -527,6 +527,7 @@
     background-color: #ffffff;
 }
 .carName{
+    font-size: 2em;
     color: #41464b;
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -687,7 +688,7 @@
 }
 .carInfo{
     position: relative;
-    top: 5vh;
+    top: 2vh;
     left: -1vw;
     width: 50vw;
     height: 25vh;
@@ -728,13 +729,13 @@
     font-size: 0.9em;
 }
 .detail2{
-    position: absolute;
-    top: 7vh;
+    position: relative;
+    top: 1vh;
     margin: auto;
-    left: 4vw;
+    left: 3vw;
     font-family: 'Poppins', sans-serif;
     color: #6c757d;
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 .detail3{
     position: absolute;
