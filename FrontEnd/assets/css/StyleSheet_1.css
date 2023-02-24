@@ -599,6 +599,8 @@
     position: relative;
     background-color: white;
     border: 1px solid #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
     top: 15px;
     left: 0;
     right: 0;
@@ -772,5 +774,20 @@
     font-family: 'Poppins', sans-serif;
     color: #6c757d;
     font-size: 0.9em;
+}
+
+#bcType,#bcBrand,#bcColor{
+    width: 15vw;
+    height: 4.5vh;
+    position: relative;
+    background-color: white;
+    border: 1px solid #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 25px;
 }
 
