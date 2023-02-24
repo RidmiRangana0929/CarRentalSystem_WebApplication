@@ -843,4 +843,57 @@
     border-color: transparent;
     color: #fefefe;
 }
+.bc_lbl{
+    position: absolute;
+    top: 0vh;
+    margin: auto;
+    left: 0vw;
+    right: 0vw;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #6c757d;
+    font-size: 0.9em;
+    width: 20vw;
+    height: 5vh;
+}
+#bc_name{
+    top: 12vh;
+    color: #efa80f;
+    font-size: 1.8em;
+    position: absolute;
+    margin: auto;
+    left: 0vw;
+    right: 0vw;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    width: 20vw;
+    height: 5vh;
+
+}
+#bc_nic{
+    position: absolute;
+    top: 21.6vh;
+    margin: auto;
+    left: 0vw;
+    right: 0vw;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #41464b;
+    font-size: 1.1em;
+    width: 20vw;
+    height: 5vh;
+}
+#bc_contact{
+    position: absolute;
+    top: 32vh;
+    margin: auto;
+    left: 0vw;
+    right: 0vw;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #41464b;
+    font-size: 1.1em;
+    width: 20vw;
+    height: 5vh;
+}
 
