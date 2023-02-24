@@ -34,10 +34,11 @@
 
 <div style="width: 23vw;height: 85vh;position: absolute;/*left:0;*/top: 70vh;left: 2vw; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;"></div>
 <div style="width: 70vw;height: 85vh;position: absolute;/*left:0;*/top: 70vh;right: 2vw; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
-    <div style="height: 75vh; width: 65vw; background-color: rgb(177,39,39); position: relative; margin: auto; left: 0; right: 0;top: 5vh;display: grid;grid-template-rows: repeat(2,1fr);grid-template-columns: repeat(1,1fr);">
-        <div style="height: 37.5vh; width: 65vw;">
-            <div style="height: 30vh; width: 65vw;display: grid;grid-template-rows: repeat(2,1fr);grid-template-columns: repeat(4,1fr);">
-                <div style="background-color: #0a53be">
+    <div style="height: 65vh; width: 65vw; position: relative; margin: auto; left: 0; right: 0;top: 5vh;display: grid;grid-template-rows: repeat(2,1fr);grid-template-columns: repeat(1,1fr);">
+        <div style="height: 100%; width: 65vw;">
+            <h4 id="subTopic1">Car Details</h4>
+            <div style="height: 20vh; width: 65vw;display: grid;grid-template-rows: repeat(2,1fr);grid-template-columns: repeat(4,1fr);position: relative;top: 7vh">
+                <div>
                     <label id="bc_type"  class="carTag">Type</label>
                     <select class="form-select" aria-label="Default select example" id="bcType">
                         <option selected>All</option>
@@ -46,7 +47,7 @@
                         <option value="3">Luxury</option>
                     </select>
                 </div>
-                <div style="background-color: #8fadd7">
+                <div>
                     <label id="bc_brand"  class="carTag">Brand</label>
                     <select class="form-select" aria-label="Default select example" id="bcBrand">
                         <option selected>Not Selected</option>
@@ -64,7 +65,7 @@
                         <option value="12">BMW</option>
                     </select>
                 </div>
-                <div style="background-color: #e26565">
+                <div>
                     <label id="bc_color"  class="carTag">Type</label>
                     <select class="form-select" aria-label="Default select example" id="bcColor">
                         <option selected>Not Selected</option>
@@ -74,14 +75,94 @@
                         <option value="4">Blue</option>
                     </select>
                 </div>
-                <div style="background-color: #e3a937"></div>
-                <div style="background-color: #46b12a"></div>
-                <div style="background-color: #100752"></div>
-                <div style="background-color: #be0abb"></div>
-                <div style="background-color: #55e0af"></div>
+                <div>
+                    <div class="form-group">
+                        <label for="bcRegNo" id="bc_RegNo"  class="carTag">Registration No</label>
+                        <input class="form-control" id="bcRegNo"  required type="text">
+                        <span class="control-error" id="lbl_bc_RegNo"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label for="bcLossDamage" id="bc_LossDamage"  class="carTag">Loss Damage Waiver</label>
+                        <input class="form-control" id="bcLossDamage"  required type="text">
+                        <span class="control-error" id="lbl_bc_LossDamage"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label for="bcExtraKmPrice" id="bc_ExtraKmPrice"  class="carTag">Price For Extra Kilometers</label>
+                        <input class="form-control" id="bcExtraKmPrice"  required type="text">
+                        <span class="control-error" id="lbl_bc_ExtraKmPrice"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label for="bcDailyRate" id="bc_DailyRate"  class="carTag">Daily Rate</label>
+                        <input class="form-control" id="bcDailyRate"  required type="text">
+                        <span class="control-error" id="lbl_bc_DailyRate"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label for="bcMonthlyRate" id="bc_MonthlyRate"  class="carTag">Monthly Rate</label>
+                        <input class="form-control" id="bcMonthlyRate"  required type="text">
+                        <span class="control-error" id="lbl_bc_MonthlyRate"></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div style="height: 37.5vh; width: 65vw;"></div>
+        <div style="height: 100%; width: 65vw;">
+            <h4 id="subTopic2">Rental Details</h4>
+            <div style="height: 20vh; width: 65vw;display: grid;grid-template-rows: repeat(2,1fr);grid-template-columns: repeat(4,1fr);position: relative;top: 7vh">
+
+                <div>
+                    <div class="form-group">
+                        <label for="bcId" id="bc_Id"  class="carTag">Rental Id</label>
+                        <input class="form-control" id="bcId"  required type="text">
+                        <span class="control-error" id="lbl_bc_Id"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label for="bcDate" id="bc_Date"  class="carTag">Date</label>
+                        <input class="form-control" id="bcDate"  required type="text">
+                        <span class="control-error" id="lbl_bc_Date"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label id="bc_Pickup"  class="carTag">Pickup Date</label>
+                        <input class="form-control" id="bcPickup" type="date">
+                    </div>
+                </div>
+                <div>
+                    <div class="form-group">
+                        <label id="bc_Return"  class="carTag">Return Date</label>
+                        <input class="form-control" id="bcReturn" type="date">
+                    </div>
+                </div>
+                <div>
+                    <label id="bc_Service"  class="carTag">Service</label>
+                    <select class="form-select" aria-label="Default select example" id="bcService">
+                        <option selected>Not Selected</option>
+                        <option value="1">Self Drive</option>
+                        <option value="2">With Driver</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="bc_SlipPhoto"  class="carTag">Image Of Bank Slip</label>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" id="bcSlipPhoto">
+                    </div>
+                </div>
+                <div>
+                </div>
+                <div></div>
+
+
+            </div>
+        </div>
     </div>
 </div>
 
