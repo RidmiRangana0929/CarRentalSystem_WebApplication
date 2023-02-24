@@ -477,20 +477,7 @@
     color: #fefefe;
 }
 
-#btnEditProfile{
-    width: 20vw;
-    height: 4vh;
-    position: absolute;
-    bottom: 9vh;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #EFA80F;
-    font-family: 'Poppins', sans-serif;
-    border-radius: 25px;
-    border-color: transparent;
-    color: #fefefe;
-}
+
 #btnCustomerSignOut{
     width: 20vw;
     height: 4vh;
@@ -896,4 +883,35 @@
     width: 20vw;
     height: 5vh;
 }
+
+#btnEditProfile{
+    width: 16vw;
+    height: 4.5vh;
+    position: absolute;
+    bottom: 8vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border-color: transparent;
+    color: #fefefe;
+}
+#btnSignOut{
+    width: 9vw;
+    height: 4.5vh;
+    position: absolute;
+    bottom: 8vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #EFA80F;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    border-color: transparent;
+    color: #fefefe;
+}
+.bc_link{}
+
 
