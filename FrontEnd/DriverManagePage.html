@@ -111,7 +111,7 @@
                     <th>Address</th>
                 </tr>
                 </thead>
-                <tbody id="tblCustomer">
+                <tbody id="tblDriver">
                 </tbody>
             </table>
         </section>
@@ -129,6 +129,54 @@
 
 <script>
 
+    let baseURL="http://localhost:8080/BackEnd_war/";
+
+
+
+    loadAllDrivers();
+
+    //Add customer to the database
+    $("#btnSave").click(function () {
+
+        var formData = $("#driver_form").serialize();
+        // will generate a query String including form data
+
+        //send ajax request to the customer servlet
+        $.ajax({
+            url: baseURL+"driver",
+            method: "post",
+            data: formData,
+            dataType:"json",
+            success: function (res) {
+                alert(res.message);
+                loadAllDrivers();
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+    });
+
+
+    function loadAllDrivers() {
+        $("#tblDriver").empty();
+        $.ajax({
+            url: baseURL+"customer",
+            dataType: "json",
+            success: function (resp) {
+                console.log(resp);
+                for (let driver of resp.data) {
+                    var row = '<tr><td>' + driver.d_id + '</td><td>' + driver.d_name + '</td><td>' + driver.d_nic + '</td><td>' + driver.d_license_no + '</td></tr>' + driver.d_contact_no + '</td><td>' + driver.d_address + '</td></tr>';
+                    $("#tblDriver").append(row);
+                }
+                bindRowClickEvents();
+                setTextFieldValues("","","","","","");
+                $("#driverId").focus();
+            }
+        });
+
+    }
 
 
 
