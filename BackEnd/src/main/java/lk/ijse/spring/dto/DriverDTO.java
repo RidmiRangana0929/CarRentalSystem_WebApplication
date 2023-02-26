@@ -12,9 +12,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Data
 @ToString
-@Entity
 public class DriverDTO {
-    @Id
     private String d_id;
     private String d_name;
     private String d_nic;

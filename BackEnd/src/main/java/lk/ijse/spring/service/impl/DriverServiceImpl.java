@@ -47,7 +47,7 @@ public class DriverServiceImpl implements DriverService {
     public void updateDriver(DriverDTO dto) {
 
         if (!repo.existsById(dto.getD_id())){
-            throw new RuntimeException("Customer "+dto.getD_id()+" Not Available to Update..!");
+            throw new RuntimeException("Driver "+dto.getD_id()+" Not Available to Update..!");
         }
         repo.save( mapper.map(dto, Driver.class));
 
