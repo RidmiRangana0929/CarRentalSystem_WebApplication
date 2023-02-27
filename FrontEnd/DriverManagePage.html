@@ -129,7 +129,7 @@
 
 <script>
 
-    let baseURL="http://localhost:8080/BackEnd_war/";
+    let baseURL="http://localhost:8080/jpa/";
 
 
 
@@ -162,7 +162,7 @@
     function loadAllDrivers() {
         $("#tblDriver").empty();
         $.ajax({
-            url: baseURL+"customer",
+            url: baseURL+"driver",
             dataType: "json",
             success: function (resp) {
                 console.log(resp);
