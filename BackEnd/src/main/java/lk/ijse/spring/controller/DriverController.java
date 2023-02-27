@@ -24,7 +24,7 @@ public class DriverController {
         return new ResponseUtil("200",dto.getD_id()+"Added.!",null);
     }
 
-    @PostMapping
+    @PutMapping
     public ResponseUtil updateDriver(@RequestBody DriverDTO dto){
         service.updateDriver(dto);
         return new ResponseUtil("200",dto.getD_id()+": Updated.!",null);
@@ -42,10 +42,10 @@ public class DriverController {
         return new ResponseUtil("200","Success..!",allDrivers);
     }
 
-    @GetMapping(params = "name")
+    /*@GetMapping(params = "name")
     public ResponseUtil searchDriverByName(String name){
         DriverDTO driver=service.searchDriverByName(name);
         return new ResponseUtil("200","success..!",driver);
-    }
+    }*/
 
 }

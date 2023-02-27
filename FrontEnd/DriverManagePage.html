@@ -38,42 +38,42 @@
             <div>
                 <div class="form-group">
                     <label for="driverId" id="d_id" class="tag2" style="top: 2vh; left: 1.5vw">Driver ID</label>
-                    <input class="form-control" id="driverId"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <input class="form-control" id="driverId" name="d_id"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                     <span class="control-error" id="lbl_d_id"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="driverName" id="d_name" class="tag2" style="top: 2vh; left: 1.5vw">Name</label>
-                    <input class="form-control" id="driverName"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <input class="form-control" id="driverName" name="d_name"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                     <span class="control-error" id="lbl_d_name"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="driverNic" id="d_nic" class="tag2" style="top: 2vh; left: 1.5vw">NIC</label>
-                    <input class="form-control" id="driverNic"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <input class="form-control" id="driverNic" name="d_nic"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                     <span class="control-error" id="lbl_d_nic"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="driverLicenseNo" id="d_license_no" class="tag2" style="top: 2vh; left: 1.5vw">License No</label>
-                    <input class="form-control" id="driverLicenseNo"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <input class="form-control" id="driverLicenseNo" name="d_license_no"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                     <span class="control-error" id="lbl_d_license_no"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="driverContactNo" id="d_contact_no" class="tag2" style="top: 2vh; left: 1.5vw">Contact No</label>
-                    <input class="form-control" id="driverContactNo"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <input class="form-control" id="driverContactNo" name="d_contact_no"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                     <span class="control-error" id="lbl_d_contact_no"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="driverAddress" id="d_address" class="tag2" style="top: 2vh; left: 1.5vw">Address</label>
-                    <input class="form-control" id="driverAddress"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <input class="form-control" id="driverAddress" name="d_address"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                     <span class="control-error" id="lbl_d_address"></span>
                 </div>
             </div>
@@ -129,14 +129,43 @@
 
 <script>
 
-    let baseURL="http://localhost:8080/jpa/";
+    let baseURL="http://localhost:8080/BackEnd_war/";
 
 
 
     loadAllDrivers();
 
     //Add customer to the database
+
     $("#btnSave").click(function () {
+
+        var name= $("driverName").val();
+        console.log(name);
+
+        var formData = $("#driver_form").serialize();
+        // will generate a query String including form data
+
+        console.log(formData);
+        //send ajax request to the customer servlet
+
+
+        $.ajax({
+            url: baseURL+"driver",
+            method: "post",
+            data: formData,
+            dataType:"json",
+            success: function (res) {
+                loadAllDrivers();
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+    });
+
+    /*$("#btnSave").click(function () {
 
         var formData = $("#driver_form").serialize();
         // will generate a query String including form data
@@ -148,18 +177,36 @@
             data: formData,
             dataType:"json",
             success: function (res) {
-                alert(res.message);
                 loadAllDrivers();
+                alert(res.message);
             },
             error:function(error){
                 var jsObject=JSON.parse(error.responseText);
                 alert(jsObject.message);
             }
         });
-    });
+    });*/
 
 
-    function loadAllDrivers() {
+
+    function loadAllDrivers(){
+        $('#tblDriver').empty();
+        $.ajax({
+            url: baseURL+'driver',
+            method: 'get',
+            dataType: 'json',
+            success: function (resp) {
+                for (let d of resp.data) {
+                    var row = '<tr><td>'+d.d_id+'</td><td>'+d.d_name+'</td><td>'+d.d_nic+'</td><td>'+d.d_license_no+'</td><td>'+d.d_contact_no+'</td><td>'+d.d_address+'</td></tr>'
+                    $('#tblDriver').append(row);
+                }
+                bindRowClickEvents();
+                setTextFieldValues("","","","","","");
+            }
+        });
+    }
+
+    /*function loadAllDrivers() {
         $("#tblDriver").empty();
         $.ajax({
             url: baseURL+"driver",
@@ -172,10 +219,41 @@
                 }
                 bindRowClickEvents();
                 setTextFieldValues("","","","","","");
-                $("#driverId").focus();
+                /!*$("#driverId").focus();*!/
             }
         });
+    }*/
 
+
+    function bindRowClickEvents() {
+        $("#tblDriver>tr").click(function () {
+            let d_id = $(this).children(":eq(0)").text();
+            let d_name = $(this).children(":eq(1)").text();
+            let d_nic = $(this).children(":eq(2)").text();
+            let d_license_no = $(this).children(":eq(3)").text();
+            let d_contact_no = $(this).children(":eq(4)").text();
+            let d_address = $(this).children(":eq(5)").text();
+            // console.log(id, name, address, salary);
+
+            //setting table details values to text fields
+            $('#driverId').val(d_id);
+            $('#driverName').val(d_name);
+            $('#driverNic').val(d_nic);
+            $('#driverLicenseNo').val(d_license_no);
+            $('#driverContactNo').val(d_contact_no);
+            $('#driverAddress').val(d_address);
+
+        });
+    }
+
+
+    function setTextFieldValues(id, name, nic, license,contact,address) {
+        $("#driverId").val(id);
+        $("#driverName").val(name);
+        $("#driverNic").val(nic);
+        $("#driverLicenseNo").val(license);
+        $("#driverContactNo").val(contact);
+        $("#driverAddress").val(address);
     }
 
 

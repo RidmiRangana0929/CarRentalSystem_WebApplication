@@ -1,7 +1,9 @@
 package lk.ijse.spring.config;
 
+import lk.ijse.spring.repo.DriverRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -16,6 +18,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
+@EnableJpaRepositories(basePackageClasses = {DriverRepo.class})
 public class JPAConfig {
 
     @Bean
