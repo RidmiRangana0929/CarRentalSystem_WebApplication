@@ -295,6 +295,40 @@
     });
 
 
+    /*$("#btnDelete").click(function () {
+        let id = $("#driverId").val();
+        $.ajax({
+            url: baseURL+"driver?d_id=" + id + "",
+            method: "delete",
+            dataType:"json",
+            success: function (resp) {
+                alert(resp.message);
+                loadAllDrivers();
+            },
+            error:function (error){
+                alert(JSON.parse(error.responseText).message);
+            }
+        });
+    });*/
+
+
+    $('#btnDelete').click(function () {
+        let id = $('#driverId').val();
+
+        $.ajax({
+            url: baseURL+'driver?id='+id+"",
+            method: 'delete',
+            success: function (res) {
+                alert(res.message);
+                loadAllDrivers();
+            },
+            error:function (error){
+                alert(JSON.parse(error.responseText).message);
+            }
+        });
+    });
+
+
 
 </script>
 
