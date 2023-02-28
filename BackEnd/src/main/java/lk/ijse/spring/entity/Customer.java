@@ -6,8 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,4 +31,8 @@ public class Customer {
     private String c_password;
     private String c_nic_img;
     private String c_license_img;
+
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
+    private List<Rent> rents = new ArrayList<>();
+
 }

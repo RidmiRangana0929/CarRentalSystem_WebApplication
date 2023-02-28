@@ -6,8 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,4 +37,8 @@ public class Car {
     private String back_img;
     private String side_img;
     private String interior_img;
+
+    @OneToMany(mappedBy = "car",cascade = CascadeType.ALL)
+    private List<Rent> rents = new ArrayList<>();
+
 }
