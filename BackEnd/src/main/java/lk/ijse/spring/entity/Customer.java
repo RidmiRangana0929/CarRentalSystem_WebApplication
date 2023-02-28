@@ -22,6 +22,7 @@ public class Customer {
     private String c_nic;
     private String c_license_no;
     private String c_contact_no;
+    private String c_address;
     private String c_username;
     private String c_password;
     private String c_nic_img;
