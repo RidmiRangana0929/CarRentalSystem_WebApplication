@@ -1,4 +1,28 @@
 package lk.ijse.spring.service.impl;
 
-public class CarServiceImpl {
+import lk.ijse.spring.dto.CarDTO;
+import lk.ijse.spring.service.CarService;
+
+import java.util.ArrayList;
+
+public class CarServiceImpl implements CarService {
+    @Override
+    public void addCar(CarDTO dto) {
+
+    }
+
+    @Override
+    public void deleteCar(String id) {
+
+    }
+
+    @Override
+    public void updateCar(CarDTO dto) {
+
+    }
+
+    @Override
+    public ArrayList<CarDTO> getAllCars() {
+        return null;
+    }
 }
