@@ -34,11 +34,119 @@
 
 <section>
 
-    <section id="signUp1">
+    <form id="customer_form">
+        <section id="signUp1">
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="customerId" id="c_id" class="tag1" style="top: 2vh; left: 2vw">Customer ID</label>
+                    <input class="form-control" id="customerId"   required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_id"></span>
+                </div>
+            </div>
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="name" id="c_name" class="tag1" style="top: 2vh; left: 2vw">Name</label>
+                    <input class="form-control" id="name"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_name"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="signUp2">
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="nic" id="c_nic" class="tag1" style="top: 2vh; left: 2vw">Email</label>
+                    <input class="form-control" id="nic"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_nic"></span>
+                </div>
+            </div>
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="email" id="c_email" class="tag1" style="top: 2vh; left: 2vw">NIC</label>
+                    <input class="form-control" id="email"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_email"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="signUp3">
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="license_no" id="c_license_no" class="tag1" style="top: 2vh; left: 2vw">License No</label>
+                    <input class="form-control" id="license_no"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_license_no"></span>
+                </div>
+            </div>
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="contact_no" id="c_contact_no" class="tag1" style="top: 2vh; left: 2vw">Contact No</label>
+                    <input class="form-control" id="contact_no"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_contact_no"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="signUp4">
+            <div class="form-group">
+                <label for="address" id="c_address" class="tag1" style="top: 2vh; left: 2vw">Address</label>
+                <input class="form-control" id="address"  required type="text" style="width: 62vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                <span class="control-error" id="lbl_c_address"></span>
+            </div>
+        </section>
+
+        <section id="signUp5">
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="username" id="c_username" class="tag1" style="top: 2vh; left: 2vw">Username</label>
+                    <input class="form-control" id="username"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_username"></span>
+                </div>
+            </div>
+            <div style="background-color: rgba(255,255,255,0)">
+                <div class="form-group">
+                    <label for="password" id="c_password" class="tag1" style="top: 2vh; left: 2vw">Password</label>
+                    <input class="form-control" id="password"  required type="password" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_password"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="signUp6">
+            <div style="background-color: rgba(255,255,255,0)">
+                <div>
+                    <label id="c_nic_img"  class="tag1" style="left: 2vw !important;">Image Of NIC</label>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" id="nic_img" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    </div>
+                </div>
+
+                <!--<div class="form-group">
+                    <label for="username" id="c_username" class="tag1" style="top: 2vh; left: 2vw">Username</label>
+                    <input class="form-control" id="username"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_username"></span>
+                </div>-->
+            </div>
+            <div style="background-color: rgba(255,255,255,0)">
+                <div>
+                    <label id="c_license_img"  class="tag1" style="left: 2vw !important;">Image Of License</label>
+                    <div class="mb-3">
+                        <input class="form-control" type="file" id="license_img" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    </div>
+                </div>
+                <!--<div class="form-group">
+                    <label for="password" id="c_password" class="tag1" style="top: 2vh; left: 2vw">Password</label>
+                    <input class="form-control" id="password"  required type="password" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                    <span class="control-error" id="lbl_c_password"></span>
+                </div>-->
+            </div>
+        </section>
+    </form>
+
+    <!--<section id="signUp1">
         <div style="background-color: rgba(255,255,255,0)">
             <div class="form-group">
                 <label for="customerId" id="c_id" class="tag1" style="top: 2vh; left: 2vw">Customer ID</label>
-                <input class="form-control" id="customerId"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+                <input class="form-control" id="customerId"   required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                 <span class="control-error" id="lbl_c_id"></span>
             </div>
         </div>
@@ -108,15 +216,15 @@
                 <span class="control-error" id="lbl_c_password"></span>
             </div>
         </div>
-    </section>
+    </section>-->
 
-    <section id="signUp6">
+    <section id="signUp7">
         <div style="background-color: rgba(255,255,255,0)">
             <button id="btnSignUp">Sign Up</button>
         </div>
     </section>
 
-    <section id="signUp7">
+    <section id="signUp8">
         <h6 class="tag1" style="font-size: 1.2em !important;top: 0 !important; width: 30vw; left: 21vw !important;">Already have an account ?</h6>
 
         <a href="signInPage.html" style="position: relative;top: -5vh !important;font-size: 1.2em !important;color: #EFA80F !important;left: 38.5vw !important;width: 6vw !important;" >Sign In</a>
