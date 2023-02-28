@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackageClasses = {DriverController.class, AppWideExceptionHandler.class})
+@ComponentScan(basePackages = "lk.ijse.spring")
+/*@ComponentScan(basePackageClasses = {DriverController.class, AppWideExceptionHandler.class})*/
 public class WebAppConfig {
 }

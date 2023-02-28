@@ -18,7 +18,8 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackageClasses = {DriverRepo.class})
+@EnableJpaRepositories(basePackages = "lk.ijse.spring.repo")
+/*@EnableJpaRepositories(basePackageClasses = {DriverRepo.class})*/
 public class JPAConfig {
 
     @Bean

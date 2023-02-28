@@ -238,7 +238,7 @@
 
     let baseURL="http://localhost:8080/BackEnd_war/";
 
-    function registerCustomer() {
+    $("#btnSignUp").click(function () {
         var data = new FormData();
 
         let nic = $("#customerNicImg")[0].files[0];
@@ -290,6 +290,60 @@
             }*/
         });
         cleanRegisterForm();
+    });
+
+    function registerCustomer() {
+        /*var data = new FormData();
+
+        let nic = $("#customerNicImg")[0].files[0];
+        let nicFileName = nic.name;
+        let license = $("#customerLicenseImg")[0].files[0];
+        let licenseFileName = license.name;
+
+        data.append("file", nic);
+        data.append("file", license);
+
+        let customerDTO = {
+            customer_id: $("#customerId").val(),
+            customer_name: $("#customerName").val(),
+            customer_nic: $("#customerNic").val(),
+            customer_email: $("#customerEmail").val(),
+            customer_license: $("#customerLicenseNo").val(),
+            customer_contact: $("#customerContactNo").val(),
+            customer_address: $("#customerAddress").val(),
+            customer_username: $("#customerUsername").val(),
+            customer_password: $("#customerPassword").val(),
+            customer_nic_img: nicFileName,
+            customer_license_img: licenseFileName
+        }
+        data.append("customer", new Blob([JSON.stringify(customerDTO)], {type: "application/json"}));
+
+        $.ajax({
+            url: baseURL+"customer",
+            method: 'post',
+            async: true,
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function (res) {
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+            /!*success: function (resp) {
+                alert(resp.message);
+                if (!(resp.data == null)) {
+                    openCustomerHome(resp.data)
+                    getAvailableCar();
+                }
+            },
+            error: function (err) {
+                console.log(err);
+            }*!/
+        });*/
+
     }
 
     function cleanRegisterForm() {
