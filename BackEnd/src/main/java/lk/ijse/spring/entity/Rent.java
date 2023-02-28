@@ -30,7 +30,7 @@ public class Rent {
     private Customer customer;
 
     @ManyToOne
-    @JoinColumn(name="car_reg_no", referencedColumnName = "register_no",nullable = false)
+    @JoinColumn(name="reg_no", referencedColumnName = "register_no",nullable = false)
     private Car car;
 
     @ManyToOne

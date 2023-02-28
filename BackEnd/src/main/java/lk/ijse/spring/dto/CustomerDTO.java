@@ -11,10 +11,15 @@ import lombok.ToString;
 @Data
 @ToString
 public class CustomerDTO {
-    private String d_id;
-    private String d_name;
-    private String d_nic;
-    private String d_license_no;
-    private String d_contact_no;
-    private String d_address;
+    private String c_id;
+    private String c_name;
+    private String c_email;
+    private String c_nic;
+    private String c_license_no;
+    private String c_contact_no;
+    private String c_address;
+    private String c_username;
+    private String c_password;
+    private String c_nic_img;
+    private String c_license_img;
 }
