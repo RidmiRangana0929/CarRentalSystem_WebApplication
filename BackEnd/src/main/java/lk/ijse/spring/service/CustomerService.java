@@ -5,7 +5,7 @@ import lk.ijse.spring.dto.CustomerDTO;
 import java.util.ArrayList;
 
 public interface CustomerService {
-    public void SignUpCustomer(CustomerDTO dto);
+    void SignUpCustomer(CustomerDTO dto);
 
     public ArrayList<CustomerDTO> getAllCustomers();
 }
