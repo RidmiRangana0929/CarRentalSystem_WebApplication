@@ -22,4 +22,5 @@ public class Driver {
     private String d_license_no;
     private String d_contact_no;
     private String d_address;
+
 }
