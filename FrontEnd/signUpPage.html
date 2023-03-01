@@ -250,17 +250,17 @@
         data.append("file", license);
 
         let customerDTO = {
-            customer_id: $("#customerId").val(),
-            customer_name: $("#customerName").val(),
-            customer_nic: $("#customerNic").val(),
-            customer_email: $("#customerEmail").val(),
-            customer_license: $("#customerLicenseNo").val(),
-            customer_contact: $("#customerContactNo").val(),
-            customer_address: $("#customerAddress").val(),
-            customer_username: $("#customerUsername").val(),
-            customer_password: $("#customerPassword").val(),
-            customer_nic_img: nicFileName,
-            customer_license_img: licenseFileName
+            c_id: $("#customerId").val(),
+            c_name: $("#customerName").val(),
+            c_email: $("#customerEmail").val(),
+            c_nic: $("#customerNic").val(),
+            c_license_no: $("#customerLicenseNo").val(),
+            c_contact_no: $("#customerContactNo").val(),
+            c_address: $("#customerAddress").val(),
+            c_username: $("#customerUsername").val(),
+            c_password: $("#customerPassword").val(),
+            c_nic_img: nicFileName,
+            c_license_img: licenseFileName
         }
         data.append("customer", new Blob([JSON.stringify(customerDTO)], {type: "application/json"}));
 

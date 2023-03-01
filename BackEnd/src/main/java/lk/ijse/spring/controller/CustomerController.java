@@ -33,7 +33,7 @@ public class CustomerController {
         customerService.SignUpCustomer(customerDTO);
 
 
-        for (MultipartFile myFile : file) {
+        /*for (MultipartFile myFile : file) {
 
             try {
                 String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
@@ -45,7 +45,7 @@ public class CustomerController {
                 e.printStackTrace();
                 return new ResponseUtil("500", "Registration Failed.Try Again Latter", null);
             }
-        }
+        }*/
 
 
         return new ResponseUtil("200", "Registration Successfully....", customerDTO);
