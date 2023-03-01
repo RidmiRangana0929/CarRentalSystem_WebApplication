@@ -2,7 +2,9 @@ package lk.ijse.spring.controller;
 
 
 import lk.ijse.spring.dto.CustomerDTO;
+import lk.ijse.spring.dto.DriverDTO;
 import lk.ijse.spring.service.CustomerService;
+import lk.ijse.spring.service.DriverService;
 import lk.ijse.spring.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,6 +22,16 @@ import java.net.URISyntaxException;
 public class CustomerController {
 
     @Autowired
+    private CustomerService service;
+
+
+    @PostMapping
+    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO dto) {
+        service.saveCustomer(dto);
+        return new ResponseUtil("200",dto.getC_id()+"Added.!",null);
+    }
+
+    /*@Autowired
     CustomerService customerService;
 
 
@@ -33,7 +45,7 @@ public class CustomerController {
         customerService.SignUpCustomer(customerDTO);
 
 
-        /*for (MultipartFile myFile : file) {
+        for (MultipartFile myFile : file) {
 
             try {
                 String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
@@ -45,11 +57,11 @@ public class CustomerController {
                 e.printStackTrace();
                 return new ResponseUtil("500", "Registration Failed.Try Again Latter", null);
             }
-        }*/
+        }
 
 
         return new ResponseUtil("200", "Registration Successfully....", customerDTO);
-    }
+    }*/
 
 
 }

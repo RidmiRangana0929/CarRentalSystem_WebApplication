@@ -239,15 +239,41 @@
     let baseURL="http://localhost:8080/BackEnd_war/";
 
     $("#btnSignUp").click(function () {
-        var data = new FormData();
+
+        var name= $("customerName").val();
+        console.log(name);
+
+        var formData = $("#customer_form").serialize();
+        // will generate a query String including form data
+
+        console.log(formData);
+        //send ajax request to the customer servlet
+
+
+        $.ajax({
+            url: baseURL+"customer",
+            method: "post",
+            data: formData,
+            dataType:"json",
+            success: function (res) {
+                /*loadAllDrivers();*/
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+
+        /*var data = new FormData();
 
         let nic = $("#customerNicImg")[0].files[0];
         let nicFileName = nic.name;
         let license = $("#customerLicenseImg")[0].files[0];
         let licenseFileName = license.name;
 
-        data.append("file", nic);
-        data.append("file", license);
+        data.append("file", nic, nicFileName);
+        data.append("file", license, licenseFileName);
 
         let customerDTO = {
             c_id: $("#customerId").val(),
@@ -278,17 +304,7 @@
                 var jsObject=JSON.parse(error.responseText);
                 alert(jsObject.message);
             }
-            /*success: function (resp) {
-                alert(resp.message);
-                if (!(resp.data == null)) {
-                    openCustomerHome(resp.data)
-                    getAvailableCar();
-                }
-            },
-            error: function (err) {
-                console.log(err);
-            }*/
-        });
+        });*/
         cleanRegisterForm();
     });
 

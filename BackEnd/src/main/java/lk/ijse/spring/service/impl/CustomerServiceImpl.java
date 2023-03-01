@@ -24,7 +24,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 
     @Override
-    public void SignUpCustomer(CustomerDTO dto) {
+    public void saveCustomer(CustomerDTO dto) {
         if (repo.existsById(dto.getC_id())) {
             throw new RuntimeException("Customer "+dto.getC_id()+" Already Exist..!");
         }
