@@ -59,6 +59,24 @@
 
 <script>
 
+    let baseURL="http://localhost:8080/BackEnd_war/";
+
+    loadAllCustomers();
+
+    function loadAllCustomers(){
+        $('#tblCustomer').empty();
+        $.ajax({
+            url: baseURL+'customer',
+            method: 'get',
+            dataType: 'json',
+            success: function (resp) {
+                for (let cus of resp.data) {
+                    var row = '<tr><td>'+cus.c_id+'</td><td>'+cus.c_name+'</td><td>'+cus.c_email+'</td><td>'+cus.c_nic+'</td><td>'+cus.c_license_no+'</td><td>'+cus.c_contact_no+'</td><td>'+cus.c_address+'</td><td>'+cus.c_username+'</td><td>'+cus.c_password+'</td></tr>'
+                    $('#tblCustomer').append(row);
+                }
+            }
+        });
+    }
 
 </script>
 </body>
