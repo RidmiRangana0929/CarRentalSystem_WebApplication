@@ -220,6 +220,27 @@
         });
     }
 
+    function bindRowClickEvents() {
+        $("#tblCar>tr").click(function () {
+            let id = $(this).children(":eq(0)").text();
+            let name = $(this).children(":eq(1)").text();
+            let nic = $(this).children(":eq(2)").text();
+            let license_no = $(this).children(":eq(3)").text();
+            let contact_no = $(this).children(":eq(4)").text();
+            let address = $(this).children(":eq(5)").text();
+            // console.log(id, name, address, salary);
+
+            //setting table details values to text fields
+            $('#driverId').val(id);
+            $('#driverName').val(name);
+            $('#driverNic').val(nic);
+            $('#driverLicenseNo').val(license_no);
+            $('#driverContactNo').val(contact_no);
+            $('#driverAddress').val(address);
+
+        });
+    }
+
 </script>
 </body>
 </html>
