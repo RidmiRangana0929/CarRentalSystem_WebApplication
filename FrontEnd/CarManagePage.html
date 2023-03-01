@@ -34,20 +34,20 @@
             <div>
                 <div class="form-group">
                     <label for="registerNo" id="register_no"  class="carTag">Register No</label>
-                    <input class="form-control" id="registerNo"  required type="text">
+                    <input class="form-control" id="registerNo" name="register_no" required type="text">
                     <span class="control-error" id="lbl_register_no"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="brand" id="c_brand"  class="carTag">Brand</label>
-                    <input class="form-control" id="brand"  required type="text">
+                    <input class="form-control" id="brand" name="brand" required type="text">
                     <span class="control-error" id="lbl_c_brand"></span>
                 </div>
             </div>
             <div>
                 <label id="c_type"  class="carTag">Type</label>
-                <select class="form-select" aria-label="Default select example" id="type">
+                <select class="form-select" name="type" aria-label="Default select example" id="type">
                     <option selected>Not Selected</option>
                     <option value="1">General</option>
                     <option value="2">Premium</option>
@@ -57,13 +57,13 @@
             <div>
                 <div class="form-group">
                     <label for="passengers" id="c_passengers"  class="carTag">No Of Passengers</label>
-                    <input class="form-control" id="passengers"  required type="text">
+                    <input class="form-control" id="passengers" name="no_of_passengers" required type="text">
                     <span class="control-error" id="lbl_c_passengers"></span>
                 </div>
             </div>
             <div>
                 <label id="c_transmission_type"  class="carTag">Transmission Type</label>
-                <select class="form-select" aria-label="Default select example" id="transmissionType">
+                <select class="form-select" name="transmission_type" aria-label="Default select example" id="transmissionType">
 
                     <option selected>Not Selected</option>
                     <option value="1">Manual</option>
@@ -72,7 +72,7 @@
             </div>
             <div>
                 <label id="c_fuelType" class="carTag">Fuel Type</label>
-                <select class="form-select" aria-label="Default select example" id="fuelType">
+                <select class="form-select" name="fuel_type" aria-label="Default select example" id="fuelType">
                     <option selected>Not Selected</option>
                     <option value="1">Petrol</option>
                     <option value="2">Diesel</option>
@@ -81,74 +81,74 @@
             <div>
                 <div class="form-group">
                     <label for="color" id="c_color"  class="carTag">Color</label>
-                    <input class="form-control" id="color"  required type="text">
+                    <input class="form-control" id="color" name="color" required type="text">
                     <span class="control-error" id="lbl_c_color"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="dailyRate" id="c_dailyRate"  class="carTag">Daily Rate</label>
-                    <input class="form-control" id="dailyRate"  required type="text">
+                    <input class="form-control" id="dailyRate" name="daily_rate"  required type="text">
                     <span class="control-error" id="lbl_c_dailyRate"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="kmForDay" id="c_kmForDay"  class="carTag">Kilometers For Day</label>
-                    <input class="form-control" id="kmForDay"  required type="text">
+                    <input class="form-control" id="kmForDay" name="km_for_day" required type="text">
                     <span class="control-error" id="lbl_c_kmForDay"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="monthlyRate" id="c_monthlyRate"  class="carTag">Monthly Rate</label>
-                    <input class="form-control" id="monthlyRate"  required type="text">
+                    <input class="form-control" id="monthlyRate" name="monthly_rate" required type="text">
                     <span class="control-error" id="lbl_c_monthlyRate"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="kmForMonth" id="c_kmForMonth"  class="carTag">Kilometers For Month</label>
-                    <input class="form-control" id="kmForMonth"  required type="text">
+                    <input class="form-control" id="kmForMonth" name="km_for_month" required type="text">
                     <span class="control-error" id="lbl_c_kmForMonth"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="priceForExtraKm" id="c_priceForExtraKm"  class="carTag">Price For Extra Kilometers</label>
-                    <input class="form-control" id="priceForExtraKm"  required type="text">
+                    <input class="form-control" id="priceForExtraKm" name="price_for_extra_km" required type="text">
                     <span class="control-error" id="lbl_c_priceForExtraKm"></span>
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label for="lossDamageWaiver" id="c_LossDamageWaiver"  class="carTag">Loss damage Waiver</label>
-                    <input class="form-control" id="lossDamageWaiver"  required type="text">
+                    <input class="form-control" id="lossDamageWaiver" name="loss_damage_waiver"  required type="text">
                     <span class="control-error" id="lbl_c_LossDamageWaiver"></span>
                 </div>
             </div>
             <div>
                 <label id="c_frontView"  class="carTag">Image Of Front view</label>
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="frontView">
+                    <input class="form-control" name="front_img" type="file" id="frontView">
                 </div>
             </div>
             <div>
                 <label id="c_backView"  class="carTag">Image Of Back view</label>
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="backView">
+                    <input class="form-control" name="back_img" type="file" id="backView">
                 </div>
             </div>
             <div>
                 <label id="c_sideView"  class="carTag">Image Of Side view</label>
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="sideView">
+                    <input class="form-control" name="side_img" type="file" id="sideView">
                 </div>
             </div>
             <div>
                 <label id="c_interior"  class="carTag">Image Of Interior</label>
                 <div class="mb-3">
-                    <input class="form-control" type="file" id="interior">
+                    <input class="form-control" name="interior_img" type="file" id="interior">
                 </div>
             </div>
             <div></div>
@@ -202,6 +202,24 @@
 
 <script>
     let baseURL="http://localhost:8080/BackEnd_war/";
+
+    function loadAllCars(){
+        $('#tblCar').empty();
+        $.ajax({
+            url: baseURL+'car',
+            method: 'get',
+            dataType: 'json',
+            success: function (resp) {
+                for (let c of resp.data) {
+                    var row = '<tr><td>'+c.register_no+'</td><td>'+c.brand+'</td><td>'+c.type+'</td><td>'+c.no_of_passengers+'</td><td>'+c.transmission_type+'</td><td>'+c.fuel_type+'</td><td>'+c.color+'</td><td>'+c.daily_rate+'</td><td>'+c.km_for_day+'</td><td>'+c.monthly_rate+'</td><td>'+c.km_for_month+'</td><td>'+c.price_for_extra_km+'</td><td>'+c.loss_damage_waiver+'</td></tr>'
+                    $('#tblCar').append(row);
+                }
+                bindRowClickEvents();
+                setTextFieldValues("","","","","","","","","","","","","");
+            }
+        });
+    }
+
 </script>
 </body>
 </html>
