@@ -232,7 +232,7 @@
             let dailyRate = $(this).children(":eq(7)").text();
             let kmForDay = $(this).children(":eq(8)").text();
             let monthlyRate = $(this).children(":eq(9)").text();
-            let kamForMonth = $(this).children(":eq(10").text();
+            let kamForMonth = $(this).children(":eq(10)").text();
             let priceForExtra = $(this).children(":eq(11)").text();
             let lossDamage = $(this).children(":eq(12)").text();
             // console.log(id, name, address, salary);
@@ -256,12 +256,19 @@
     }
 
     function setTextFieldValues(regNo, brand, type, noOfPassengers,transmissionType, fuelType,color,dailyRate,kmForDay,monthlyRate,kamForMonth, priceForExtra,lossDamage) {
-        $("#driverId").val(id);
-        $("#driverName").val(name);
-        $("#driverNic").val(nic);
-        $("#driverLicenseNo").val(license);
-        $("#driverContactNo").val(contact);
-        $("#driverAddress").val(address);
+        $('#registerNo').val(regNo);
+        $('#brand').val(brand);
+        $('#type').val(type);
+        $('#passengers').val(noOfPassengers);
+        $('#transmissionType').val(transmissionType);
+        $('#fuelType').val(fuelType);
+        $('#color').val(color);
+        $('#dailyRate').val(dailyRate);
+        $('#kmForDay').val(kmForDay);
+        $('#monthlyRate').val(monthlyRate);
+        $('#kmForMonth').val(kamForMonth);
+        $('#priceForExtraKm').val(priceForExtra);
+        $('#lossDamageWaiver').val(lossDamage);
     }
 
 </script>
