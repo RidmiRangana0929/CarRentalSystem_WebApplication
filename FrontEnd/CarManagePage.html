@@ -203,6 +203,8 @@
 <script>
     let baseURL="http://localhost:8080/BackEnd_war/";
 
+    loadAllCars();
+
     function loadAllCars(){
         $('#tblCar').empty();
         $.ajax({
@@ -296,6 +298,59 @@
             }
         });
     });
+
+
+    $("#btnCarUpdate").click(function () {
+        let regNo = $("#registerNo").val();
+        let brand = $("#brand").val();
+        let type = $("#type").val();
+        let noOfPassengers = $("#passengers").val();
+        let transmissionType = $("#transmissionType").val();
+        let fuelType = $("#fuelType").val();
+        let color = $("#color").val();
+        let dailyRate = $("#dailyRate").val();
+        let kmForDay = $("#kmForDay").val();
+        let monthlyRate = $("#monthlyRate").val();
+        let kamForMonth = $("#kmForMonth").val();
+        let priceForExtra = $("#priceForExtraKm").val();
+        let lossDamage = $("#lossDamageWaiver").val();
+
+
+        var car = {
+            registerNo: regNo,
+            brand:brand,
+            type:type,
+            passengers: noOfPassengers,
+            transmissionType:transmissionType,
+            fuelType:fuelType,
+            color: color,
+            dailyRate:dailyRate,
+            kmForDay:kmForDay,
+            monthlyRate: monthlyRate,
+            kmForMonth:kamForMonth,
+            priceForExtraKm:priceForExtra,
+            lossDamageWaiver:lossDamage
+
+        }
+
+        $.ajax({
+            url: baseURL+'car',
+            method: 'put',
+            contentType:"application/json",
+            data:JSON.stringify(car),
+            dataType:"json",
+            success: function (res) {
+                alert(res.message);
+                loadAllCars();
+            },
+            error:function (error){
+                let cause= JSON.parse(error.responseText).message;
+                alert(cause);
+            }
+
+        });
+    });
+
 
 </script>
 </body>
