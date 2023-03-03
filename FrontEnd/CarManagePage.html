@@ -30,7 +30,7 @@
 
 <section style="background-color: #ffffff;width: 98.9vw; height: 93vh; position: absolute; top: 7vh;">
     <div style="width: 90%;height: 70%;position: absolute;left:0;top: 0; bottom: 0; right: 0; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
-        <section class="carForm">
+        <form class="carForm" id="car_form">
             <div>
                 <div class="form-group">
                     <label for="registerNo" id="register_no"  class="carTag">Register No</label>
@@ -154,7 +154,7 @@
             <div></div>
             <div></div>
             <div></div>
-        </section>
+        </form>
         <section style="width: 90%;height: 15%;position: absolute;bottom: 0;left: 0;right: 0;margin: auto; background-color: rgba(255,255,255,0)">
             <div>
                 <button id="btnCarSave">Save</button>
@@ -270,6 +270,32 @@
         $('#priceForExtraKm').val(priceForExtra);
         $('#lossDamageWaiver').val(lossDamage);
     }
+
+
+    $("#btnCarSave").click(function () {
+
+        var name= $("carBrand").val();
+        console.log(name);
+
+        var formData = $("#car_form").serialize();
+
+        console.log(formData);
+
+        $.ajax({
+            url: baseURL+"car",
+            method: "post",
+            data: formData,
+            dataType:"json",
+            success: function (res) {
+                loadAllCars();
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+    });
 
 </script>
 </body>
