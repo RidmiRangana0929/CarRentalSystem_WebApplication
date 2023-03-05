@@ -380,12 +380,24 @@
 #signUp4{
     width: 64vw;
     height: 10vh;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 0;
     position: relative;
     margin: auto;
     left: 0;
     right: 0;
     top: 0;
     background-color: rgba(255, 255, 255, 0);
+    /*width: 64vw;
+    height: 10vh;
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0);*/
 }
 #signUp5{
     width: 64vw;
@@ -594,7 +606,7 @@
     box-shadow: 0 0 0 0.25rem #efa80f52 !important;
 }
 
-#registerNo,#brand,#type,#passengers,#transmissionType,#fuelType,#color,#dailyRate,#kmForDay,#monthlyRate,#kmForMonth,#priceForExtraKm,#lossDamageWaiver,#frontView,#backView,#sideView,#interior{
+#idNo,#registerNo,#brand,#type,#passengers,#transmissionType,#fuelType,#color,#dailyRate,#kmForDay,#monthlyRate,#kmForMonth,#priceForExtraKm,#lossDamageWaiver,#frontView,#backView,#sideView,#interior{
     width: 20vw;
     height: 4.5vh;
     position: relative;

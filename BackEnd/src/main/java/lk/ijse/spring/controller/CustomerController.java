@@ -28,12 +28,11 @@ public class CustomerController {
     @PostMapping
     public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO dto) {
         service.saveCustomer(dto);
-        return new ResponseUtil("200",dto.getC_id()+"Added.!",null);
+        return new ResponseUtil("200",dto.getC_nic()+"Added.!",null);
     }
 
     /*@Autowired
     CustomerService customerService;
-
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(path = "customer", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -43,7 +42,6 @@ public class CustomerController {
         customerDTO.setC_nic_img("uploads/" + customerDTO.getC_nic_img());
 
         customerService.SignUpCustomer(customerDTO);
-
 
         for (MultipartFile myFile : file) {
 
@@ -58,8 +56,6 @@ public class CustomerController {
                 return new ResponseUtil("500", "Registration Failed.Try Again Latter", null);
             }
         }
-
-
         return new ResponseUtil("200", "Registration Successfully....", customerDTO);
     }*/
 
