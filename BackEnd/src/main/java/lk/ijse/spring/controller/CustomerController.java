@@ -31,7 +31,7 @@ public class CustomerController {
         return new ResponseUtil("200",dto.getC_nic()+"Added.!",null);
     }
 
-    /*@PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseUtil uploadImagesAndPath(@RequestPart("c_nic_img")MultipartFile nicImg, @RequestPart("c_license_img")MultipartFile licenseImg, @PathVariable String id) {
         try {
             String projectPath = String.valueOf(new File("C:\\Users\\ridhm\\GDSE59\\SpringFinal\\CarRentalSystem\\FrontEnd\\assets\\savedImages"));
@@ -52,7 +52,7 @@ public class CustomerController {
             e.printStackTrace();
             return new ResponseUtil("500", "Error", null);
         }
-    }*/
+    }
 
     /* @Autowired
     CustomerService customerService;
