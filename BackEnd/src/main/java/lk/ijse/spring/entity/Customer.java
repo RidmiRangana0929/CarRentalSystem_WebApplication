@@ -31,7 +31,8 @@ public class Customer {
     private String c_nic_img;
     private String c_license_img;
 
+
+
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     private List<Rent> rents = new ArrayList<>();
-
 }

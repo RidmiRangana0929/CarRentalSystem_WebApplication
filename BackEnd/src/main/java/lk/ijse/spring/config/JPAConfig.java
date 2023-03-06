@@ -37,7 +37,7 @@ public class JPAConfig {
     public DataSource dataSource(){
         DriverManagerDataSource ds=new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/car_rental?createDatabaseIfNotExist=true");
+        ds.setUrl("jdbc:mysql://localhost:3306/car_rental_system?createDatabaseIfNotExist=true");
         ds.setUsername("root");
         ds.setPassword("1234");
         return ds;

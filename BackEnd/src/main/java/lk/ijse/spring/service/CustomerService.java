@@ -8,4 +8,6 @@ public interface CustomerService {
     void saveCustomer(CustomerDTO dto);
 
     public ArrayList<CustomerDTO> getAllCustomers();
+
+    public void uploadCustomerImages(String nicImgPath, String licenseImgPath, String id);
 }

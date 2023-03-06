@@ -79,7 +79,7 @@
             </div>
             <div style="background-color: rgba(255,255,255,0)">
                 <div class="form-group">
-                    <label for="customerAddress" id="c_address" class="tag1" style="top: 2vh; left: 2vw">Username</label>
+                    <label for="customerAddress" id="c_address" class="tag1" style="top: 2vh; left: 2vw">Address</label>
                     <input class="form-control" id="customerAddress" name="c_address" required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
                     <span class="control-error" id="lbl_c_address"></span>
                 </div>
@@ -245,6 +245,96 @@
     let baseURL="http://localhost:8080/BackEnd_war/";
 
     $("#btnSignUp").click(function () {
+        registerCustomer();
+        cleanRegisterForm();
+    })
+
+
+
+    function registerCustomer() {
+        /*var data = new FormData();
+
+        let nic = $("#inputImgNic")[0].files[0];
+        let nicFileName = nic.name;
+        let license = $("#inputImgLicense")[0].files[0];
+        let licenseFileName = license.name;
+
+        data.append("file", nic);
+        data.append("file", license);*/
+
+        let customer = {
+            c_nic: $("#customerNic").val(),
+            c_name: $("#customerName").val(),
+            c_email: $("#customerEmail").val(),
+            c_license_no: $("#customerLicenseNo").val(),
+            c_contact_no: $("#customerContactNo").val(),
+            c_address:$("#customerAddress").val(),
+            c_username: $("#customerUsername").val(),
+            c_password: $("#customerPassword").val()
+            /*nicImg: $("#inputImgNic").val(),
+            licenseImg: $("#inputImgLicense").val()
+            nicImg: nicFileName,
+            licenseImg: licenseFileName*/
+
+        }
+
+        let customerNic = $("#customerNic").val()
+
+
+        /*data.append("customer", new Blob([JSON.stringify(customerDTO)], {type: "application/json"}));*/
+
+        $.ajax({
+            url: baseURL + "customer",
+            method: 'post',
+            /*async: true,*/
+            contentType: "application/json",
+            /*processData: false,*/
+            data: JSON.stringify(customer),
+            dataType: 'json',
+            success: function (res) {
+                uploadCustomerImgs(customerNic);
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+
+    }
+
+
+    function uploadCustomerImgs(id){
+        var fileObjectNic = $('#customerNicImg')[0].files[0];
+        var fileNameNic = id + "-nic-" + $('#customerNicImg')[0].files[0].name;
+        console.log(fileObjectNic);
+        console.log(fileNameNic);
+
+        var fileObjectLicence = $('#customerLicenseImg')[0].files[0];
+        var fileNameLicence = id + "-licence-" + $('#customerLicenseImg')[0].files[0].name;
+        console.log(fileObjectLicence);
+        console.log(fileNameLicence);
+
+        var data = new FormData();
+        data.append("c_nic_img", fileObjectNic, fileNameNic);
+        data.append("c_license_img", fileObjectLicence, fileNameLicence);
+
+        $.ajax({
+            url: baseURL + "customer/up/" + id,
+            method: "PUT",
+            async: true,
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function (res) {
+                console.log("Uploaded");
+                // clearSignupTextFields();
+            }
+        });
+    }
+
+
+    /*$("#btnSignUp").click(function () {
 
         var name= $("customerName").val();
         console.log(name);
@@ -262,7 +352,7 @@
             data: formData,
             dataType:"json",
             success: function (res) {
-                /*loadAllDrivers();*/
+                /!*loadAllDrivers();*!/
                 alert(res.message);
             },
             error:function(error){
@@ -271,7 +361,7 @@
             }
         });
 
-        /*var data = new FormData();
+        /!*var data = new FormData();
 
         let nic = $("#customerNicImg")[0].files[0];
         let nicFileName = nic.name;
@@ -310,10 +400,9 @@
                 var jsObject=JSON.parse(error.responseText);
                 alert(jsObject.message);
             }
-        });*/
+        });*!/
         cleanRegisterForm();
-    });
-
+    });*/
 
     function cleanRegisterForm() {
         $('#customerId,#customerName,#customerNic,#customerEmail,#customerLicenseNo, #customerContactNo,#customerAddress ,#customerUsername, #customerPassword, #customerNicImg, #customerLicenseImg').val("")

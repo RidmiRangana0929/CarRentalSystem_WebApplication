@@ -35,4 +35,12 @@ public class CustomerServiceImpl implements CustomerService {
     public ArrayList<CustomerDTO> getAllCustomers() {
         return null;
     }
+
+    @Override
+    public void uploadCustomerImages(String nicImgPath, String licenseImgPath, String id) {
+        if(!repo.existsById(id)){
+            throw new RuntimeException("Customer "+ id +" Not Found");
+        }
+        repo.updateCustomerFilePaths(nicImgPath, licenseImgPath, id);
+    }
 }

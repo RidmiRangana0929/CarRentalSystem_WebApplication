@@ -26,7 +26,7 @@ public class Rent {
     private String r_bank_slip_img;
 
     @ManyToOne
-    @JoinColumn(name="cus_id", referencedColumnName = "c_id",nullable = false)
+    @JoinColumn(name="cus_nic", referencedColumnName = "c_nic",nullable = false)
     private Customer customer;
 
     @ManyToOne

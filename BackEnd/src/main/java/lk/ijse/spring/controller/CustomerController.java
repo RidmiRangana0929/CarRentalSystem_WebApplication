@@ -26,12 +26,35 @@ public class CustomerController {
 
 
     @PostMapping
-    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO dto) {
+    public ResponseUtil saveCustomer(@RequestBody CustomerDTO dto) {
         service.saveCustomer(dto);
         return new ResponseUtil("200",dto.getC_nic()+"Added.!",null);
     }
 
-    /*@Autowired
+    /*@PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseUtil uploadImagesAndPath(@RequestPart("c_nic_img")MultipartFile nicImg, @RequestPart("c_license_img")MultipartFile licenseImg, @PathVariable String id) {
+        try {
+            String projectPath = String.valueOf(new File("C:\\Users\\ridhm\\GDSE59\\SpringFinal\\CarRentalSystem\\FrontEnd\\assets\\savedImages"));
+            File uploadsDir = new File(projectPath + "/customers");
+            uploadsDir.mkdir();
+
+            nicImg.transferTo(new File(uploadsDir.getAbsolutePath() + "//" + nicImg.getOriginalFilename()));
+            licenseImg.transferTo(new File(uploadsDir.getAbsolutePath() + "//" + licenseImg.getOriginalFilename()));
+
+            String nicImgPath = projectPath + "//customers//" + nicImg.getOriginalFilename();
+            String licenseImgPath = projectPath + "//customers//" + licenseImg.getOriginalFilename();
+
+            service.uploadCustomerImages(nicImgPath, licenseImgPath, id);
+
+            return new ResponseUtil("200", "Uploaded", null);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseUtil("500", "Error", null);
+        }
+    }*/
+
+    /* @Autowired
     CustomerService customerService;
 
     @ResponseStatus(HttpStatus.CREATED)
