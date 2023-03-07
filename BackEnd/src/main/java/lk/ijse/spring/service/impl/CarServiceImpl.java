@@ -28,7 +28,6 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public void addCar(CarDTO dto) {
-
         if (repo.existsById(dto.getRegister_no())) {
             throw new RuntimeException("Car"+dto.getRegister_no()+" Already Exist..!");
         }

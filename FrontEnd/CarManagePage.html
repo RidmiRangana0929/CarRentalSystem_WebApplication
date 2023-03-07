@@ -32,11 +32,11 @@
     <div style="width: 90%;height: 70%;position: absolute;left:0;top: 0; bottom: 0; right: 0; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
         <form class="carForm" id="car_form">
             <div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="idNo" id="id"  class="carTag">Car Id</label>
                     <input class="form-control" id="idNo" name="id" required type="text">
                     <span class="control-error" id="lbl_id"></span>
-                </div>
+                </div>-->
             </div>
             <div>
                 <div class="form-group">
@@ -54,11 +54,11 @@
             </div>
             <div>
                 <label id="c_type"  class="carTag">Type</label>
-                <select class="form-select" name="type" aria-label="Default select example" id="type">
+                <select class="form-select" name="type" aria-label="Default select example" id="type" >
                     <option selected>Not Selected</option>
-                    <option value="1">General</option>
-                    <option value="2">Premium</option>
-                    <option value="2">Luxury</option>
+                    <option value="General">General</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Luxury">Luxury</option>
                 </select>
             </div>
             <div>
@@ -73,16 +73,16 @@
                 <select class="form-select" name="transmission_type" aria-label="Default select example" id="transmissionType">
 
                     <option selected>Not Selected</option>
-                    <option value="1">Manual</option>
-                    <option value="2">Auto</option>
+                    <option value="Manual">Manual</option>
+                    <option value="Auto">Auto</option>
                 </select>
             </div>
             <div>
                 <label id="c_fuelType" class="carTag">Fuel Type</label>
                 <select class="form-select" name="fuel_type" aria-label="Default select example" id="fuelType">
                     <option selected>Not Selected</option>
-                    <option value="1">Petrol</option>
-                    <option value="2">Diesel</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="Diesel">Diesel</option>
                 </select>
             </div>
             <div>
@@ -163,13 +163,13 @@
         </form>
         <section style="width: 90%;height: 15%;position: absolute;bottom: 0;left: 0;right: 0;margin: auto; background-color: rgba(255,255,255,0)">
             <div>
-                <button id="btnCarSave">Save</button>
+                <button type="button" id="btnCarSave">Save</button>
             </div>
             <div>
-                <button id="btnCarUpdate">Update</button>
+                <button type="button" id="btnCarUpdate">Update</button>
             </div>
             <div>
-                <button id="btnCarDelete">Delete</button>
+                <button type="button" id="btnCarDelete">Delete</button>
             </div>
         </section>
     </div>
@@ -209,118 +209,7 @@
 <script>
     let baseURL="http://localhost:8080/BackEnd_war/";
 
-    loadAllCars();
-
-    function loadAllCars(){
-        $('#tblCar').empty();
-        $.ajax({
-            url: baseURL+'car',
-            method: 'get',
-            dataType: 'json',
-            success: function (resp) {
-                for (let c of resp.data) {
-                    var row = '<tr><td>'+c.register_no+'</td><td>'+c.brand+'</td><td>'+c.type+'</td><td>'+c.no_of_passengers+'</td><td>'+c.transmission_type+'</td><td>'+c.fuel_type+'</td><td>'+c.color+'</td><td>'+c.daily_rate+'</td><td>'+c.km_for_day+'</td><td>'+c.monthly_rate+'</td><td>'+c.km_for_month+'</td><td>'+c.price_for_extra_km+'</td><td>'+c.loss_damage_waiver+'</td></tr>'
-                    $('#tblCar').append(row);
-                }
-                bindRowClickEvents();
-                setTextFieldValues("","","","","","","","","","","","","");
-            }
-        });
-    }
-
-    function bindRowClickEvents() {
-        $("#tblCar>tr").click(function () {
-            let regNo = $(this).children(":eq(0)").text();
-            let brand = $(this).children(":eq(1)").text();
-            let type = $(this).children(":eq(2)").text();
-            let noOfPassengers = $(this).children(":eq(3)").text();
-            let transmissionType = $(this).children(":eq(4)").text();
-            let fuelType = $(this).children(":eq(5)").text();
-            let color = $(this).children(":eq(6)").text();
-            let dailyRate = $(this).children(":eq(7)").text();
-            let kmForDay = $(this).children(":eq(8)").text();
-            let monthlyRate = $(this).children(":eq(9)").text();
-            let kamForMonth = $(this).children(":eq(10)").text();
-            let priceForExtra = $(this).children(":eq(11)").text();
-            let lossDamage = $(this).children(":eq(12)").text();
-            // console.log(id, name, address, salary);
-
-            //setting table details values to text fields
-            $('#registerNo').val(regNo);
-            $('#brand').val(brand);
-            $('#type').val(type);
-            $('#passengers').val(noOfPassengers);
-            $('#transmissionType').val(transmissionType);
-            $('#fuelType').val(fuelType);
-            $('#color').val(color);
-            $('#dailyRate').val(dailyRate);
-            $('#kmForDay').val(kmForDay);
-            $('#monthlyRate').val(monthlyRate);
-            $('#kmForMonth').val(kamForMonth);
-            $('#priceForExtraKm').val(priceForExtra);
-            $('#lossDamageWaiver').val(lossDamage);
-
-        });
-    }
-
-    function setTextFieldValues(regNo, brand, type, noOfPassengers,transmissionType, fuelType,color,dailyRate,kmForDay,monthlyRate,kamForMonth, priceForExtra,lossDamage) {
-        $('#registerNo').val(regNo);
-        $('#brand').val(brand);
-        $('#type').val(type);
-        $('#passengers').val(noOfPassengers);
-        $('#transmissionType').val(transmissionType);
-        $('#fuelType').val(fuelType);
-        $('#color').val(color);
-        $('#dailyRate').val(dailyRate);
-        $('#kmForDay').val(kmForDay);
-        $('#monthlyRate').val(monthlyRate);
-        $('#kmForMonth').val(kamForMonth);
-        $('#priceForExtraKm').val(priceForExtra);
-        $('#lossDamageWaiver').val(lossDamage);
-    }
-
-
-    function registerCar() {
-
-        let car = {
-            registerNo: $("#registerNo").val(),
-            brand:$("#brand").val(),
-            type:$("#type").val(),
-            passengers: $("#passengers").val(),
-            transmissionType:$("#transmissionType").val(),
-            fuelType:$("#fuelType").val(),
-            color: $("#color").val(),
-            dailyRate:$("#dailyRate").val(),
-            kmForDay:$("#kmForDay").val(),
-            monthlyRate: $("#monthlyRate").val(),
-            kmForMonth:$("#kmForMonth").val(),
-            priceForExtraKm:$("#priceForExtraKm").val(),
-            lossDamageWaiver:$("#lossDamageWaiver").val()
-
-        }
-
-        let registerNo = $("#registerNo").val()
-
-
-        $.ajax({
-            url: baseURL + "car",
-            method: 'post',
-            contentType: "application/json",
-            data: JSON.stringify(car),
-            dataType: 'json',
-            success: function (res) {
-                alert(res.message);
-                /*uploadCarImgs(registerNo);*/
-                alert(res.message);
-            },
-            error:function(error){
-                var jsObject=JSON.parse(error.responseText);
-                alert(jsObject.message);
-            }
-        });
-
-    }
-
+    /*loadAllCars();*/
 
     $("#btnCarSave").click(function () {
 
@@ -350,7 +239,7 @@
     });
 
 
-    $("#btnCarUpdate").click(function () {
+    /*$("#btnCarUpdate").click(function () {
         let regNo = $("#registerNo").val();
         let brand = $("#brand").val();
         let type = $("#type").val();
@@ -399,7 +288,200 @@
             }
 
         });
-    });
+    });*/
+
+    /*function loadAllCars(){
+        $('#tblCar').empty();
+        $.ajax({
+            url: baseURL+'car',
+            method: 'get',
+            dataType: 'json',
+            success: function (resp) {
+                for (let c of resp.data) {
+                    var row = '<tr><td>'+c.register_no+'</td><td>'+c.brand+'</td><td>'+c.type+'</td><td>'+c.no_of_passengers+'</td><td>'+c.transmission_type+'</td><td>'+c.fuel_type+'</td><td>'+c.color+'</td><td>'+c.daily_rate+'</td><td>'+c.km_for_day+'</td><td>'+c.monthly_rate+'</td><td>'+c.km_for_month+'</td><td>'+c.price_for_extra_km+'</td><td>'+c.loss_damage_waiver+'</td></tr>'
+                    $('#tblCar').append(row);
+                }
+                bindRowClickEvents();
+                setTextFieldValues("","","","","","","","","","","","","");
+            }
+        });
+    }*/
+
+    /*function bindRowClickEvents() {
+        $("#tblCar>tr").click(function () {
+            let regNo = $(this).children(":eq(0)").text();
+            let brand = $(this).children(":eq(1)").text();
+            let type = $(this).children(":eq(2)").text();
+            let noOfPassengers = $(this).children(":eq(3)").text();
+            let transmissionType = $(this).children(":eq(4)").text();
+            let fuelType = $(this).children(":eq(5)").text();
+            let color = $(this).children(":eq(6)").text();
+            let dailyRate = $(this).children(":eq(7)").text();
+            let kmForDay = $(this).children(":eq(8)").text();
+            let monthlyRate = $(this).children(":eq(9)").text();
+            let kamForMonth = $(this).children(":eq(10)").text();
+            let priceForExtra = $(this).children(":eq(11)").text();
+            let lossDamage = $(this).children(":eq(12)").text();
+            // console.log(id, name, address, salary);
+
+            //setting table details values to text fields
+            $('#registerNo').val(regNo);
+            $('#brand').val(brand);
+            $('#type').val(type);
+            $('#passengers').val(noOfPassengers);
+            $('#transmissionType').val(transmissionType);
+            $('#fuelType').val(fuelType);
+            $('#color').val(color);
+            $('#dailyRate').val(dailyRate);
+            $('#kmForDay').val(kmForDay);
+            $('#monthlyRate').val(monthlyRate);
+            $('#kmForMonth').val(kamForMonth);
+            $('#priceForExtraKm').val(priceForExtra);
+            $('#lossDamageWaiver').val(lossDamage);
+
+        });
+    }*/
+
+    /*function setTextFieldValues(regNo, brand, type, noOfPassengers,transmissionType, fuelType,color,dailyRate,kmForDay,monthlyRate,kamForMonth, priceForExtra,lossDamage) {
+        $('#registerNo').val(regNo);
+        $('#brand').val(brand);
+        $('#type').val(type);
+        $('#passengers').val(noOfPassengers);
+        $('#transmissionType').val(transmissionType);
+        $('#fuelType').val(fuelType);
+        $('#color').val(color);
+        $('#dailyRate').val(dailyRate);
+        $('#kmForDay').val(kmForDay);
+        $('#monthlyRate').val(monthlyRate);
+        $('#kmForMonth').val(kamForMonth);
+        $('#priceForExtraKm').val(priceForExtra);
+        $('#lossDamageWaiver').val(lossDamage);
+    }*/
+
+
+    /*function registerCar() {
+
+        let car = {
+            registerNo: $("#registerNo").val(),
+            brand:$("#brand").val(),
+            type:$("#type").val(),
+            passengers: $("#passengers").val(),
+            transmissionType:$("#transmissionType").val(),
+            fuelType:$("#fuelType").val(),
+            color: $("#color").val(),
+            dailyRate:$("#dailyRate").val(),
+            kmForDay:$("#kmForDay").val(),
+            monthlyRate: $("#monthlyRate").val(),
+            kmForMonth:$("#kmForMonth").val(),
+            priceForExtraKm:$("#priceForExtraKm").val(),
+            lossDamageWaiver:$("#lossDamageWaiver").val()
+
+        }
+
+        let carRegisterNo = $("#registerNo").val()
+
+        $.ajax({
+            url: baseURL + "car",
+            method: 'post',
+            contentType: "application/json",
+            data: JSON.stringify(car),
+            dataType: 'json',
+            success: function (res) {
+                /!*alert(res.message);*!/
+                uploadCarImgs(carRegisterNo);
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+
+    }*/
+
+    function registerCar() {
+
+
+        let car = {
+            register_no: $("#registerNo").val(),
+            brand:$("#brand").val(),
+            type:$("#type").val(),
+            no_of_passengers: $("#passengers").val(),
+            transmission_type:$("#transmissionType").val(),
+            fuel_type:$("#fuelType").val(),
+            color: $("#color").val(),
+            daily_rate:$("#dailyRate").val(),
+            km_for_day:$("#kmForDay").val(),
+            monthly_rate: $("#monthlyRate").val(),
+            km_for_month:$("#kmForMonth").val(),
+            price_for_extra_km:$("#priceForExtraKm").val(),
+            loss_damage_waiver:$("#lossDamageWaiver").val()
+
+
+        }
+
+        let carRegNo = $("#registerNo").val()
+
+        $.ajax({
+            url: baseURL + "car",
+            method: 'post',
+            contentType: "application/json",
+            data: JSON.stringify(car),
+            dataType: 'json',
+            success: function (res) {
+                uploadCarImgs(carRegNo);
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+
+    }
+
+    function uploadCarImgs(id){
+        var fileObjectFront = $('#frontView')[0].files[0];
+        var fileNameFront = id + "-front-" + $('#frontView')[0].files[0].name;
+        console.log(fileObjectFront);
+        console.log(fileNameFront);
+
+        var fileObjectBack = $('#backView')[0].files[0];
+        var fileNameBack = id + "-back-" + $('#backView')[0].files[0].name;
+        console.log(fileObjectBack);
+        console.log(fileNameBack);
+
+        var fileObjectSide = $('#sideView')[0].files[0];
+        var fileNameSide = id + "-side-" + $('#sideView')[0].files[0].name;
+        console.log(fileObjectSide);
+        console.log(fileNameSide);
+
+        var fileObjectInterior = $('#interior')[0].files[0];
+        var fileNameInterior = id + "-interior-" + $('#interior')[0].files[0].name;
+        console.log(fileObjectInterior);
+        console.log(fileNameInterior);
+
+        var data = new FormData();
+        data.append("front_img", fileObjectFront, fileNameFront);
+        data.append("back_img", fileObjectBack, fileNameBack);
+        data.append("side_img", fileObjectSide, fileNameSide);
+        data.append("interior_img", fileObjectInterior, fileNameInterior);
+
+        $.ajax({
+            url: baseURL + "car/up/" + id,
+            method: "PUT",
+            async: true,
+            contentType: false,
+            processData: false,
+            data: data,
+            success: function (res) {
+                console.log("Uploaded");
+            }
+        });
+    }
+
+
+
 
 
 </script>
