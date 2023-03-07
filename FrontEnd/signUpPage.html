@@ -292,6 +292,7 @@
             data: JSON.stringify(customer),
             dataType: 'json',
             success: function (res) {
+                alert(res.message);
                 uploadCustomerImgs(customerNic);
                 alert(res.message);
             },

@@ -63,4 +63,12 @@ public class CarServiceImpl implements CarService {
         }.getType());
 
     }
+
+    @Override
+    public void uploadCarImages(String frontImgPath, String backImgPath, String sideImgPath, String interiorImgPath, String registerNo) {
+        if(!repo.existsById(registerNo)){
+            throw new RuntimeException("Car "+ registerNo +" Not Found");
+        }
+        repo.updateCarFilePaths(frontImgPath, backImgPath, sideImgPath, interiorImgPath, registerNo);
+    }
 }

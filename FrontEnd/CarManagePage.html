@@ -280,9 +280,53 @@
     }
 
 
+    function registerCar() {
+
+        let car = {
+            registerNo: $("#registerNo").val(),
+            brand:$("#brand").val(),
+            type:$("#type").val(),
+            passengers: $("#passengers").val(),
+            transmissionType:$("#transmissionType").val(),
+            fuelType:$("#fuelType").val(),
+            color: $("#color").val(),
+            dailyRate:$("#dailyRate").val(),
+            kmForDay:$("#kmForDay").val(),
+            monthlyRate: $("#monthlyRate").val(),
+            kmForMonth:$("#kmForMonth").val(),
+            priceForExtraKm:$("#priceForExtraKm").val(),
+            lossDamageWaiver:$("#lossDamageWaiver").val()
+
+        }
+
+        let registerNo = $("#registerNo").val()
+
+
+        $.ajax({
+            url: baseURL + "car",
+            method: 'post',
+            contentType: "application/json",
+            data: JSON.stringify(car),
+            dataType: 'json',
+            success: function (res) {
+                alert(res.message);
+                /*uploadCarImgs(registerNo);*/
+                alert(res.message);
+            },
+            error:function(error){
+                var jsObject=JSON.parse(error.responseText);
+                alert(jsObject.message);
+            }
+        });
+
+    }
+
+
     $("#btnCarSave").click(function () {
 
-        var name= $("carBrand").val();
+        registerCar();
+
+        /*var name= $("carBrand").val();
         console.log(name);
 
         var formData = $("#car_form").serialize();
@@ -302,7 +346,7 @@
                 var jsObject=JSON.parse(error.responseText);
                 alert(jsObject.message);
             }
-        });
+        });*/
     });
 
 

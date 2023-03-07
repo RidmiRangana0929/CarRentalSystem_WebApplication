@@ -12,4 +12,6 @@ public interface CarService {
     public void updateCar(CarDTO dto);
 
     public ArrayList<CarDTO> getAllCars();
+
+    public void uploadCarImages(String frontImgPath, String backImgPath, String sideImgPath, String interiorImgPath, String registerNo);
 }
