@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header class="p-3 text-bg-dark" style="background-color: #efa80f38 !important;position: absolute;width: 98.9vw;">
+<header class="p-3 text-bg-dark" style="background-color: #efa80f38 !important;position: absolute;width: 100vw;">
     <div class="container" style="height: 1vw">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -30,7 +30,27 @@
 
 <h1 id="topic1" style="top: 47vh !important;">Admin</h1>
 
-<img src="assets/images/short3.jpg" style="width: 98.9vw !important; height: 65vh;" alt="">
+<img src="assets/images/short3.jpg" style="width: 100vw !important; height: 65vh;" alt="">
+
+<section id="adminSignIn">
+    <div>
+        <div class="form-group">
+            <label for="username" id="user" class="tagAd">Username</label>
+            <input class="form-control" id="username"  required type="text" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+            <span class="control-error" id="lblAdminUsername"></span>
+        </div>
+    </div>
+    <div>
+        <div class="form-group">
+            <label for="password" id="pass" class="tagAd">Username</label>
+            <input class="form-control" id="password"  required type="password" style="width: 30vw;height: 4.5vh;position: relative;background-color: white;border: 1px solid #EFA80F;top: 15px;left: 0;right: 0;margin: auto;border-radius: 25px; ">
+            <span class="control-error" id="lblAdminPassword"></span>
+        </div>
+    </div>
+    <div>
+        <button id="btnAdminSignIn">Sign In</button>
+    </div>
+</section>
 
 
 <script src="assets/js/bootstrap.min.js"></script>
