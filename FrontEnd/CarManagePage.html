@@ -32,13 +32,6 @@
     <div style="width: 90%;height: 70%;position: absolute;left:0;top: 0; bottom: 0; right: 0; margin: auto;background: white;box-shadow: 3px 3px 10px #dcdce8;border-radius: 30px;">
         <form class="carForm" id="car_form">
             <div>
-                <!--<div class="form-group">
-                    <label for="idNo" id="id"  class="carTag">Car Id</label>
-                    <input class="form-control" id="idNo" name="id" required type="text">
-                    <span class="control-error" id="lbl_id"></span>
-                </div>-->
-            </div>
-            <div>
                 <div class="form-group">
                     <label for="registerNo" id="register_no"  class="carTag">Register No</label>
                     <input class="form-control" id="registerNo" name="register_no" required type="text">
@@ -160,6 +153,7 @@
             </div>
             <div></div>
             <div></div>
+            <div></div>
         </form>
         <section style="width: 90%;height: 15%;position: absolute;bottom: 0;left: 0;right: 0;margin: auto; background-color: rgba(255,255,255,0)">
             <div>
@@ -209,7 +203,10 @@
 <script>
     let baseURL="http://localhost:8080/BackEnd_war/";
 
-    /*loadAllCars();*/
+    loadAllCars();
+    $("registerNo").onkeyup(function (e) {
+
+    });
 
     $("#btnCarSave").click(function () {
 
@@ -290,7 +287,7 @@
         });
     });*/
 
-    /*function loadAllCars(){
+    function loadAllCars(){
         $('#tblCar').empty();
         $.ajax({
             url: baseURL+'car',
@@ -305,9 +302,9 @@
                 setTextFieldValues("","","","","","","","","","","","","");
             }
         });
-    }*/
+    }
 
-    /*function bindRowClickEvents() {
+    function bindRowClickEvents() {
         $("#tblCar>tr").click(function () {
             let regNo = $(this).children(":eq(0)").text();
             let brand = $(this).children(":eq(1)").text();
@@ -322,6 +319,7 @@
             let kamForMonth = $(this).children(":eq(10)").text();
             let priceForExtra = $(this).children(":eq(11)").text();
             let lossDamage = $(this).children(":eq(12)").text();
+
             // console.log(id, name, address, salary);
 
             //setting table details values to text fields
@@ -340,9 +338,9 @@
             $('#lossDamageWaiver').val(lossDamage);
 
         });
-    }*/
+    }
 
-    /*function setTextFieldValues(regNo, brand, type, noOfPassengers,transmissionType, fuelType,color,dailyRate,kmForDay,monthlyRate,kamForMonth, priceForExtra,lossDamage) {
+    function setTextFieldValues(regNo, brand, type, noOfPassengers,transmissionType, fuelType,color,dailyRate,kmForDay,monthlyRate,kamForMonth, priceForExtra,lossDamage) {
         $('#registerNo').val(regNo);
         $('#brand').val(brand);
         $('#type').val(type);
@@ -356,48 +354,7 @@
         $('#kmForMonth').val(kamForMonth);
         $('#priceForExtraKm').val(priceForExtra);
         $('#lossDamageWaiver').val(lossDamage);
-    }*/
-
-
-    /*function registerCar() {
-
-        let car = {
-            registerNo: $("#registerNo").val(),
-            brand:$("#brand").val(),
-            type:$("#type").val(),
-            passengers: $("#passengers").val(),
-            transmissionType:$("#transmissionType").val(),
-            fuelType:$("#fuelType").val(),
-            color: $("#color").val(),
-            dailyRate:$("#dailyRate").val(),
-            kmForDay:$("#kmForDay").val(),
-            monthlyRate: $("#monthlyRate").val(),
-            kmForMonth:$("#kmForMonth").val(),
-            priceForExtraKm:$("#priceForExtraKm").val(),
-            lossDamageWaiver:$("#lossDamageWaiver").val()
-
-        }
-
-        let carRegisterNo = $("#registerNo").val()
-
-        $.ajax({
-            url: baseURL + "car",
-            method: 'post',
-            contentType: "application/json",
-            data: JSON.stringify(car),
-            dataType: 'json',
-            success: function (res) {
-                /!*alert(res.message);*!/
-                uploadCarImgs(carRegisterNo);
-                alert(res.message);
-            },
-            error:function(error){
-                var jsObject=JSON.parse(error.responseText);
-                alert(jsObject.message);
-            }
-        });
-
-    }*/
+    }
 
     function registerCar() {
 
@@ -416,8 +373,6 @@
             km_for_month:$("#kmForMonth").val(),
             price_for_extra_km:$("#priceForExtraKm").val(),
             loss_damage_waiver:$("#lossDamageWaiver").val()
-
-
         }
 
         let carRegNo = $("#registerNo").val()
@@ -430,6 +385,7 @@
             dataType: 'json',
             success: function (res) {
                 uploadCarImgs(carRegNo);
+                loadAllCars();
                 alert(res.message);
             },
             error:function(error){

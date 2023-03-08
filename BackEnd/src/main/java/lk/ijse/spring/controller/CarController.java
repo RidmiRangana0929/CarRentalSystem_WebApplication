@@ -61,7 +61,7 @@ public class CarController {
         }
     }
 
-    /*@DeleteMapping(params = "id")
+    @DeleteMapping(params = "id")
     public ResponseUtil deleteCar(String id){
         service.deleteCar(id);
         return new ResponseUtil("200",id+": Deleted..!",null);
@@ -71,5 +71,5 @@ public class CarController {
     public ResponseUtil getAllCars(){
         ArrayList<CarDTO> allCars= service.getAllCars();
         return new ResponseUtil("200","Success..!",allCars);
-    }*/
+    }
 }
