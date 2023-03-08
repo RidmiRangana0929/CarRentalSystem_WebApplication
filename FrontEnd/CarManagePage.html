@@ -204,39 +204,30 @@
     let baseURL="http://localhost:8080/BackEnd_war/";
 
     loadAllCars();
-    $("registerNo").onkeyup(function (e) {
-
-    });
 
     $("#btnCarSave").click(function () {
 
         registerCar();
+    });
 
-        /*var name= $("carBrand").val();
-        console.log(name);
-
-        var formData = $("#car_form").serialize();
-
-        console.log(formData);
+    $('#btnCarDelete').click(function () {
+        let id = $('#registerNo').val();
 
         $.ajax({
-            url: baseURL+"car",
-            method: "post",
-            data: formData,
-            dataType:"json",
+            url: baseURL+'car?id='+id+"",
+            method: 'delete',
             success: function (res) {
-                loadAllCars();
                 alert(res.message);
+                loadAllCars();
             },
-            error:function(error){
-                var jsObject=JSON.parse(error.responseText);
-                alert(jsObject.message);
+            error:function (error){
+                alert(JSON.parse(error.responseText).message);
             }
-        });*/
+        });
     });
 
 
-    /*$("#btnCarUpdate").click(function () {
+    $("#btnCarUpdate").click(function () {
         let regNo = $("#registerNo").val();
         let brand = $("#brand").val();
         let type = $("#type").val();
@@ -253,21 +244,23 @@
 
 
         var car = {
-            registerNo: regNo,
+            register_no: regNo,
             brand:brand,
             type:type,
-            passengers: noOfPassengers,
-            transmissionType:transmissionType,
-            fuelType:fuelType,
+            no_of_passengers: noOfPassengers,
+            transmission_type:transmissionType,
+            fuel_type:fuelType,
             color: color,
-            dailyRate:dailyRate,
-            kmForDay:kmForDay,
-            monthlyRate: monthlyRate,
-            kmForMonth:kamForMonth,
-            priceForExtraKm:priceForExtra,
-            lossDamageWaiver:lossDamage
+            daily_rate:dailyRate,
+            km_for_day:kmForDay,
+            monthly_rate: monthlyRate,
+            km_for_month:kamForMonth,
+            price_for_extra_km:priceForExtra,
+            loss_damage_waiver:lossDamage
 
         }
+
+        let carRegNo = $("#registerNo").val()
 
         $.ajax({
             url: baseURL+'car',
@@ -277,6 +270,7 @@
             dataType:"json",
             success: function (res) {
                 alert(res.message);
+                uploadCarImgs(carRegNo);
                 loadAllCars();
             },
             error:function (error){
@@ -285,7 +279,7 @@
             }
 
         });
-    });*/
+    });
 
     function loadAllCars(){
         $('#tblCar').empty();

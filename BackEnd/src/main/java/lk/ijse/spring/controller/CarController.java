@@ -28,11 +28,11 @@ public class CarController {
         return new ResponseUtil("200",dto.getRegister_no()+"Added.!",null);
     }
 
-    /*@PutMapping
+    @PutMapping
     public ResponseUtil updateCar(@RequestBody CarDTO dto){
         service.updateCar(dto);
         return new ResponseUtil("200",dto.getRegister_no()+": Updated.!",null);
-    }*/
+    }
 
     @PutMapping(path = "/up/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseUtil uploadImagesAndPath(@RequestPart("front_img") MultipartFile frontImg, @RequestPart("back_img")MultipartFile backImg,@RequestPart("side_img") MultipartFile sideImg,@RequestPart("interior_img") MultipartFile interiorImg, @PathVariable String id) {
